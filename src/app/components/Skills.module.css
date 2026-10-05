@@ -1,0 +1,121 @@
+.skillGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.skillCard {
+  padding: 32px;
+}
+
+.skillCardHeader {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 28px;
+}
+
+.skillIcon {
+  font-size: 1.5rem;
+}
+
+.skillCatTitle {
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.skillList {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.skillItem {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.skillInfo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.skillName {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+}
+
+.skillLevel {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+.skillBar {
+  width: 100%;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.skillFill {
+  height: 100%;
+  background: var(--accent-gradient);
+  border-radius: 4px;
+  transition: width 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Tools Section */
+.toolsSection {
+  margin-top: 64px;
+  text-align: center;
+}
+
+.toolsTitle {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 28px;
+  color: var(--text-secondary);
+}
+
+.toolsGrid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+}
+
+.toolChip {
+  padding: 10px 22px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-full);
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  transition: all var(--transition-base);
+  cursor: default;
+}
+
+.toolChip:hover {
+  border-color: var(--accent-primary);
+  color: var(--text-primary);
+  background: rgba(124, 58, 237, 0.08);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .skillGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .skillCard {
+    padding: 24px;
+  }
+}
