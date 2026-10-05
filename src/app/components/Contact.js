@@ -37,15 +37,12 @@ export default function Contact() {
   return (
     <>
       <section className={`section ${styles.contact}`} id="contact">
-        <div className={styles.bgGlow} />
         <div className="container" style={{ position: "relative", zIndex: 1 }}>
           <div className={styles.contactInner}>
-            <span className="section-label">Get In Touch</span>
             <h2 className="section-title">
-              Let&apos;s build something{" "}
-              <span className="gradient-text">amazing together</span>
+              Let&apos;s build something amazing together
             </h2>
-            <p className="section-subtitle" style={{ marginBottom: "40px" }}>
+            <p className="section-subtitle">
               Whether you have a PM opportunity, a project idea, or just want to
               chat about products — I&apos;d love to connect.
             </p>
@@ -54,7 +51,7 @@ export default function Contact() {
               href="mailto:alexjoba.dev@gmail.com"
               className={`btn-primary ${styles.contactCta}`}
             >
-              <span>Say Hello 👋</span>
+              <span>Say Hello</span>
             </a>
 
             <div className={styles.socials}>
@@ -80,13 +77,12 @@ export default function Contact() {
         <div className="container">
           <div className={styles.footerInner}>
             <span className={styles.footerLogo}>
-              <span className={styles.footerLogoIcon}>A</span>
-              Alex<span style={{ color: "var(--accent-primary)" }}>.</span>
+              Alex Job A.
             </span>
             <p className={styles.footerText}>
               Designed & built by Alex Job A · {new Date().getFullYear()}
             </p>
-            <p className={styles.footerSub}>Aspiring Product Manager</p>
+            <p className={styles.footerSub}>Aspiring Product Owner</p>
           </div>
         </div>
       </footer>

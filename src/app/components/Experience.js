@@ -33,11 +33,10 @@ export default function Experience() {
   return (
     <section className="section" id="experience">
       <div className="container">
-        <span className="section-label">Experience</span>
         <h2 className="section-title">
-          Where I&apos;ve made an <span className="gradient-text">impact</span>
+          Where I&apos;ve made an impact
         </h2>
-        <p className="section-subtitle" style={{ marginBottom: "56px" }}>
+        <p className="section-subtitle">
           My professional journey driving product execution, cross-functional collaboration, and user-centric design.
         </p>
 
@@ -45,7 +44,7 @@ export default function Experience() {
           {experiences.map((exp, i) => (
             <div key={i} className={styles.timelineItem}>
               <div className={styles.timelineDot} />
-              <div className={`glass-card ${styles.experienceCard}`}>
+              <div className={`mono-card ${styles.experienceCard}`}>
                 <div className={styles.header}>
                   <div>
                     <h3 className={styles.role}>{exp.role}</h3>

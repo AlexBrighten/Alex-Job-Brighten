@@ -21,8 +21,9 @@
 
 .skillCatTitle {
   font-size: 1.1rem;
-  font-weight: 700;
+  font-weight: 600;
   letter-spacing: -0.01em;
+  color: var(--text-primary);
 }
 
 .skillList {
@@ -59,16 +60,16 @@
 .skillBar {
   width: 100%;
   height: 4px;
-  background: rgba(255, 255, 255, 0.05);
+  background: var(--bg-secondary);
   border-radius: 4px;
   overflow: hidden;
 }
 
 .skillFill {
   height: 100%;
-  background: var(--accent-gradient);
+  background: var(--text-primary);
   border-radius: 4px;
-  transition: width 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: width 1.2s ease;
 }
 
 /* Tools Section */
@@ -79,7 +80,7 @@
 
 .toolsTitle {
   font-size: 1.2rem;
-  font-weight: 700;
+  font-weight: 600;
   margin-bottom: 28px;
   color: var(--text-secondary);
 }
@@ -93,9 +94,9 @@
 
 .toolChip {
   padding: 10px 22px;
-  background: var(--bg-card);
+  background: var(--bg-primary);
   border: 1px solid var(--border-color);
-  border-radius: var(--radius-full);
+  border-radius: var(--radius-sm);
   font-size: 0.85rem;
   font-weight: 500;
   color: var(--text-secondary);
@@ -104,10 +105,8 @@
 }
 
 .toolChip:hover {
-  border-color: var(--accent-primary);
+  border-color: var(--text-primary);
   color: var(--text-primary);
-  background: rgba(124, 58, 237, 0.08);
-  transform: translateY(-2px);
 }
 
 @media (max-width: 768px) {

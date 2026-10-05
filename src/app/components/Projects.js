@@ -38,11 +38,10 @@ export default function Projects() {
   return (
     <section className="section" id="projects">
       <div className="container">
-        <span className="section-label">Projects</span>
         <h2 className="section-title">
-          Things I&apos;ve <span className="gradient-text">built & shipped</span>
+          Things I&apos;ve built & shipped
         </h2>
-        <p className="section-subtitle" style={{ marginBottom: "56px" }}>
+        <p className="section-subtitle">
           From apps to analysis frameworks — here&apos;s what I&apos;ve been
           working on to sharpen my product skills.
         </p>
@@ -51,15 +50,11 @@ export default function Projects() {
           {projects.map((project, i) => (
             <div
               key={project.title}
-              className={`glass-card ${styles.projectCard}`}
-              style={{ "--project-color": project.color }}
+              className={`mono-card ${styles.projectCard}`}
             >
               <div className={styles.projectContent}>
                 <div className={styles.projectHeader}>
-                  <span
-                    className={styles.projectNumber}
-                    style={{ color: project.color }}
-                  >
+                  <span className={styles.projectNumber}>
                     0{i + 1}
                   </span>
                   <span className={styles.projectTagline}>
@@ -87,22 +82,6 @@ export default function Projects() {
                   ))}
                 </div>
               </div>
-
-              {project.image && (
-                <div className={styles.projectImageWrapper}>
-                  <div
-                    className={styles.projectImageBg}
-                    style={{ background: `${project.color}15` }}
-                  />
-                  <Image
-                    src={project.image}
-                    alt={project.title}
-                    width={300}
-                    height={600}
-                    className={styles.projectImage}
-                  />
-                </div>
-              )}
             </div>
           ))}
         </div>

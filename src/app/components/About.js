@@ -29,11 +29,10 @@ export default function About() {
   return (
     <section className="section" id="about">
       <div className="container">
-        <span className="section-label">About Me</span>
         <h2 className="section-title">
-          Bridging <span className="gradient-text">technology</span> and user needs
+          Bridging technology and user needs
         </h2>
-        <p className="section-subtitle" style={{ marginBottom: "56px" }}>
+        <p className="section-subtitle">
           As a Computer Applications graduate (BCA), I leverage my background in computer science and software engineering to facilitate effective collaboration among cross-functional teams, driving successful sprint planning and backlog prioritization.
         </p>
 
@@ -41,10 +40,8 @@ export default function About() {
           {highlights.map((item, i) => (
             <div
               key={item.title}
-              className={`glass-card ${styles.card}`}
-              style={{ animationDelay: `${i * 0.1}s` }}
+              className={`mono-card ${styles.card}`}
             >
-              <div className={styles.cardIcon}>{item.icon}</div>
               <h3 className={styles.cardTitle}>{item.title}</h3>
               <p className={styles.cardDesc}>{item.description}</p>
             </div>

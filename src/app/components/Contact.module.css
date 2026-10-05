@@ -3,18 +3,6 @@
   overflow: hidden;
 }
 
-.bgGlow {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 600px;
-  height: 600px;
-  background: radial-gradient(circle, rgba(124, 58, 237, 0.1), transparent 70%);
-  border-radius: 50%;
-  pointer-events: none;
-}
-
 .contactInner {
   display: flex;
   flex-direction: column;
@@ -23,11 +11,12 @@
 
 .contactInner .section-subtitle {
   text-align: center;
+  margin-bottom: 40px;
 }
 
 .contactCta {
-  padding: 18px 48px;
-  font-size: 1.05rem;
+  padding: 16px 40px;
+  font-size: 1rem;
 }
 
 .socials {
@@ -42,22 +31,20 @@
   display: flex;
   align-items: center;
   gap: 8px;
-  padding: 12px 24px;
-  background: var(--bg-card);
+  padding: 10px 20px;
+  background: var(--bg-primary);
   border: 1px solid var(--border-color);
-  border-radius: var(--radius-full);
-  font-size: 0.85rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.9rem;
   font-weight: 500;
   color: var(--text-secondary);
   transition: all var(--transition-base);
 }
 
 .socialLink:hover {
-  border-color: var(--accent-primary);
+  border-color: var(--border-hover);
   color: var(--text-primary);
-  background: rgba(124, 58, 237, 0.08);
-  transform: translateY(-3px);
-  box-shadow: var(--shadow-glow);
+  background: var(--bg-secondary);
 }
 
 /* Footer */
@@ -70,29 +57,15 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 12px;
+  gap: 8px;
 }
 
 .footerLogo {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  font-weight: 700;
+  font-weight: 600;
   font-size: 1.1rem;
+  letter-spacing: -0.02em;
+  color: var(--text-primary);
   margin-bottom: 8px;
-}
-
-.footerLogoIcon {
-  width: 28px;
-  height: 28px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: var(--accent-gradient);
-  border-radius: 6px;
-  font-weight: 800;
-  font-size: 0.75rem;
-  color: white;
 }
 
 .footerText {
@@ -101,9 +74,8 @@
 }
 
 .footerSub {
-  font-size: 0.78rem;
+  font-size: 0.8rem;
   color: var(--text-muted);
-  opacity: 0.6;
 }
 
 @media (max-width: 480px) {

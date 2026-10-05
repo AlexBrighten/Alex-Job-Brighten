@@ -54,19 +54,17 @@ export default function Skills() {
   return (
     <section className="section" id="skills">
       <div className="container">
-        <span className="section-label">Skills & Tools</span>
         <h2 className="section-title">
-          My <span className="gradient-text">toolkit</span> for building great
-          products
+          My toolkit for building great products
         </h2>
-        <p className="section-subtitle" style={{ marginBottom: "56px" }}>
+        <p className="section-subtitle">
           A blend of product, design, and technical skills that help me
           contribute across the entire product lifecycle.
         </p>
 
         <div className={styles.skillGrid}>
           {skillCategories.map((cat) => (
-            <div key={cat.title} className={`glass-card ${styles.skillCard}`}>
+            <div key={cat.title} className={`mono-card ${styles.skillCard}`}>
               <div className={styles.skillCardHeader}>
                 <span className={styles.skillIcon}>{cat.icon}</span>
                 <h3 className={styles.skillCatTitle}>{cat.title}</h3>

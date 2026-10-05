@@ -20,7 +20,6 @@ export default function Navbar() {
     const handleScroll = () => {
       setScrolled(window.scrollY > 40);
 
-      // Track active section
       const sections = navLinks.map((l) => l.href.replace("#", ""));
       for (const section of sections.reverse()) {
         const el = document.getElementById(section);
@@ -38,8 +37,7 @@ export default function Navbar() {
     <nav className={`${styles.navbar} ${scrolled ? styles.scrolled : ""}`} id="navbar">
       <div className={`container ${styles.navInner}`}>
         <a href="#" className={styles.logo}>
-          <span className={styles.logoIcon}>A</span>
-          <span className={styles.logoText}>Alex<span className={styles.logoDot}>.</span></span>
+          Alex Job A.
         </a>
 
         <div className={`${styles.navLinks} ${menuOpen ? styles.open : ""}`}>
@@ -53,16 +51,12 @@ export default function Navbar() {
               {link.label}
             </a>
           ))}
-          <a href="#contact" className={`btn-primary ${styles.navCta}`} onClick={() => setMenuOpen(false)}>
-            <span>Let&apos;s Talk</span>
-          </a>
         </div>
 
         <button
           className={`${styles.hamburger} ${menuOpen ? styles.hamburgerOpen : ""}`}
           onClick={() => setMenuOpen(!menuOpen)}
           aria-label="Toggle navigation menu"
-          id="nav-toggle"
         >
           <span />
           <span />

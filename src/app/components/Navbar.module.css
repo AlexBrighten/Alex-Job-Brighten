@@ -4,15 +4,13 @@
   left: 0;
   right: 0;
   z-index: 1000;
-  padding: 20px 0;
+  padding: 24px 0;
   transition: all var(--transition-base);
+  background: var(--bg-primary);
 }
 
 .scrolled {
-  padding: 12px 0;
-  background: rgba(10, 10, 18, 0.85);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
+  padding: 16px 0;
   border-bottom: 1px solid var(--border-color);
 }
 
@@ -23,65 +21,26 @@
 }
 
 .logo {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  font-weight: 700;
-  font-size: 1.2rem;
+  font-weight: 600;
+  font-size: 1.1rem;
   z-index: 1001;
-}
-
-.logoIcon {
-  width: 36px;
-  height: 36px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: var(--accent-gradient);
-  border-radius: var(--radius-sm);
-  font-weight: 800;
-  font-size: 0.9rem;
-  color: white;
-}
-
-.logoText {
-  color: var(--text-primary);
-}
-
-.logoDot {
-  color: var(--accent-primary);
+  letter-spacing: -0.02em;
 }
 
 .navLinks {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 24px;
 }
 
 .navLink {
-  padding: 8px 18px;
   font-size: 0.9rem;
-  font-weight: 500;
   color: var(--text-secondary);
-  border-radius: var(--radius-full);
-  transition: all var(--transition-fast);
-  position: relative;
+  transition: color var(--transition-fast);
 }
 
-.navLink:hover {
+.navLink:hover, .navLink.active {
   color: var(--text-primary);
-  background: var(--bg-glass-hover);
-}
-
-.navLink.active {
-  color: var(--text-primary);
-  background: rgba(124, 58, 237, 0.12);
-}
-
-.navCta {
-  margin-left: 16px;
-  padding: 10px 24px;
-  font-size: 0.85rem;
 }
 
 .hamburger {
@@ -97,7 +56,6 @@
   width: 24px;
   height: 2px;
   background: var(--text-primary);
-  border-radius: 2px;
   transition: all var(--transition-base);
   transform-origin: center;
 }
@@ -108,7 +66,6 @@
 
 .hamburgerOpen span:nth-child(2) {
   opacity: 0;
-  transform: scaleX(0);
 }
 
 .hamburgerOpen span:nth-child(3) {
@@ -126,10 +83,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 16px;
-    background: rgba(10, 10, 18, 0.98);
-    backdrop-filter: blur(24px);
-    -webkit-backdrop-filter: blur(24px);
+    gap: 32px;
+    background: var(--bg-primary);
     opacity: 0;
     pointer-events: none;
     transition: opacity var(--transition-base);
@@ -141,14 +96,6 @@
   }
 
   .navLink {
-    font-size: 1.2rem;
-    padding: 12px 24px;
-  }
-
-  .navCta {
-    margin-left: 0;
-    margin-top: 16px;
-    font-size: 1rem;
-    padding: 14px 32px;
+    font-size: 1.25rem;
   }
 }
