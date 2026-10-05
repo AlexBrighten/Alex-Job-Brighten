@@ -1,0 +1,273 @@
+.header {
+  margin-bottom: 36px;
+}
+
+.sectionBadge {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+  margin-bottom: 12px;
+}
+
+.teardownLayout {
+  display: grid;
+  grid-template-columns: 340px 1fr;
+  gap: 28px;
+  align-items: start;
+}
+
+/* Sidebar List */
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.selectorCard {
+  padding: 18px 20px;
+  cursor: pointer;
+  background: var(--bg-primary);
+  transition: all var(--transition-fast);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.selectorCard:hover {
+  background: var(--bg-secondary);
+}
+
+.selectedCard {
+  border-color: var(--text-primary);
+  background: var(--bg-secondary);
+}
+
+.productBadge {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--text-primary);
+}
+
+.productName {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.selectorTitle {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  line-height: 1.4;
+  letter-spacing: -0.01em;
+}
+
+.selectorCategory {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.upcomingCard {
+  padding: 16px;
+  background: var(--bg-secondary);
+  border: 1px dashed var(--border-color);
+  border-radius: var(--radius-md);
+  margin-top: 8px;
+}
+
+.upcomingBadge {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-muted);
+  margin-bottom: 6px;
+}
+
+.upcomingText {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+/* Detail Card */
+.detailCard {
+  padding: 36px;
+  background: var(--bg-primary);
+}
+
+.detailHeader {
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 24px;
+  margin-bottom: 28px;
+}
+
+.headerMeta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.activeProduct {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.categoryDivider {
+  color: var(--text-muted);
+}
+
+.activeCat {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.detailTitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: var(--text-primary);
+  margin-bottom: 18px;
+  line-height: 1.35;
+}
+
+.questionBox {
+  padding: 14px 18px;
+  background: var(--bg-secondary);
+  border-left: 2px solid var(--text-primary);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  margin-bottom: 20px;
+}
+
+.questionLabel {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-muted);
+  margin-bottom: 4px;
+}
+
+.questionText {
+  font-size: 0.95rem;
+  font-style: italic;
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+.tagsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tag {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  padding: 3px 8px;
+  border-radius: var(--radius-sm);
+  font-weight: 500;
+}
+
+/* Detail Body */
+.detailBody {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.subheading {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+.obsGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.obsCard {
+  padding: 18px;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.obsAspect {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  letter-spacing: -0.01em;
+}
+
+.obsDetail {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+/* PM Recommendation Box */
+.recommendationBox {
+  padding: 24px;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+}
+
+.recTitle {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 10px;
+}
+
+.recText {
+  font-size: 0.95rem;
+  color: var(--text-primary);
+  line-height: 1.65;
+}
+
+@media (max-width: 900px) {
+  .teardownLayout {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .detailCard {
+    padding: 20px;
+  }
+
+  .detailTitle {
+    font-size: 1.25rem;
+  }
+}
