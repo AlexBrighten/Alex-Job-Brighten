@@ -1,0 +1,159 @@
+.projectList {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.projectCard {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 48px;
+  padding: 48px;
+  align-items: center;
+}
+
+.projectCard:hover {
+  border-color: color-mix(in srgb, var(--project-color) 40%, transparent);
+  box-shadow: 0 0 40px color-mix(in srgb, var(--project-color) 15%, transparent);
+}
+
+.projectContent {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.projectHeader {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.projectNumber {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.projectTagline {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 500;
+}
+
+.projectTitle {
+  font-size: 2rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+}
+
+.projectDesc {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.8;
+  max-width: 560px;
+}
+
+.metrics {
+  display: flex;
+  gap: 32px;
+  margin: 8px 0;
+}
+
+.metric {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.metricValue {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.metricLabel {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 500;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.tag {
+  padding: 6px 14px;
+  background: rgba(124, 58, 237, 0.08);
+  border: 1px solid rgba(124, 58, 237, 0.15);
+  border-radius: var(--radius-full);
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  transition: all var(--transition-fast);
+}
+
+.tag:hover {
+  background: rgba(124, 58, 237, 0.15);
+  color: var(--text-primary);
+}
+
+/* Project Image */
+.projectImageWrapper {
+  position: relative;
+  width: 240px;
+  flex-shrink: 0;
+}
+
+.projectImageBg {
+  position: absolute;
+  inset: -20px;
+  border-radius: var(--radius-xl);
+  filter: blur(40px);
+}
+
+.projectImage {
+  position: relative;
+  z-index: 1;
+  border-radius: var(--radius-lg);
+  object-fit: cover;
+  height: auto;
+  width: 100%;
+  box-shadow: var(--shadow-lg);
+}
+
+@media (max-width: 968px) {
+  .projectCard {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    padding: 32px;
+  }
+
+  .projectImageWrapper {
+    width: 100%;
+    max-width: 200px;
+    margin: 0 auto;
+  }
+
+  .metrics {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .projectCard {
+    padding: 24px;
+  }
+
+  .projectTitle {
+    font-size: 1.5rem;
+  }
+}
