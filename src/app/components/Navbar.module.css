@@ -4,13 +4,13 @@
   left: 0;
   right: 0;
   z-index: 1000;
-  padding: 20px 0;
+  padding: 18px 0;
   transition: all var(--transition-base);
   background: var(--bg-primary);
 }
 
 .scrolled {
-  padding: 14px 0;
+  padding: 12px 0;
   border-bottom: 1px solid var(--border-color);
   background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(8px);
@@ -43,11 +43,11 @@
 .navLinks {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 16px;
 }
 
 .navLink {
-  font-size: 0.85rem;
+  font-size: 0.82rem;
   color: var(--text-secondary);
   font-weight: 450;
   transition: color var(--transition-fast);
@@ -87,7 +87,7 @@
   transform: rotate(-45deg) translate(5px, -5px);
 }
 
-@media (max-width: 860px) {
+@media (max-width: 900px) {
   .hamburger {
     display: flex;
   }
@@ -98,7 +98,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 28px;
+    gap: 24px;
     background: var(--bg-primary);
     opacity: 0;
     pointer-events: none;
