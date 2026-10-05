@@ -5,8 +5,10 @@ import styles from "./Navbar.module.css";
 
 const navLinks = [
   { label: "About", href: "#about" },
+  { label: "Approach", href: "#approach" },
+  { label: "Case Studies", href: "#case-studies" },
+  { label: "Teardowns", href: "#teardowns" },
   { label: "Experience", href: "#experience" },
-  { label: "Projects", href: "#projects" },
   { label: "Skills", href: "#skills" },
   { label: "Contact", href: "#contact" },
 ];
@@ -18,17 +20,18 @@ export default function Navbar() {
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 40);
+      setScrolled(window.scrollY > 30);
 
-      const sections = navLinks.map((l) => l.href.replace("#", ""));
-      for (const section of sections.reverse()) {
-        const el = document.getElementById(section);
-        if (el && el.getBoundingClientRect().top <= 200) {
-          setActiveSection(section);
+      const sectionIds = navLinks.map((l) => l.href.replace("#", ""));
+      for (const id of sectionIds.slice().reverse()) {
+        const el = document.getElementById(id);
+        if (el && el.getBoundingClientRect().top <= 240) {
+          setActiveSection(id);
           break;
         }
       }
     };
+
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -38,19 +41,25 @@ export default function Navbar() {
       <div className={`container ${styles.navInner}`}>
         <a href="#" className={styles.logo}>
           Alex Job A.
+          <span className={styles.logoRole}>/ PM</span>
         </a>
 
         <div className={`${styles.navLinks} ${menuOpen ? styles.open : ""}`}>
-          {navLinks.map((link) => (
-            <a
-              key={link.href}
-              href={link.href}
-              className={`${styles.navLink} ${activeSection === link.href.replace("#", "") ? styles.active : ""}`}
-              onClick={() => setMenuOpen(false)}
-            >
-              {link.label}
-            </a>
-          ))}
+          {navLinks.map((link) => {
+            const sectionId = link.href.replace("#", "");
+            const isActive = activeSection === sectionId;
+
+            return (
+              <a
+                key={link.href}
+                href={link.href}
+                className={`${styles.navLink} ${isActive ? styles.active : ""}`}
+                onClick={() => setMenuOpen(false)}
+              >
+                {link.label}
+              </a>
+            );
+          })}
         </div>
 
         <button
