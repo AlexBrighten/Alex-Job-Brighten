@@ -4,55 +4,50 @@ import styles from "./Skills.module.css";
 
 const skillCategories = [
   {
-    title: "Product Management",
+    title: "Product Strategy & Ownership",
     icon: "🎯",
     skills: [
-      { name: "User Research", level: 80 },
-      { name: "PRDs & Specs", level: 75 },
-      { name: "Roadmapping", level: 70 },
-      { name: "A/B Testing", level: 65 },
-      { name: "Prioritization (RICE)", level: 85 },
+      { name: "Product Strategy", level: 90 },
+      { name: "Product Roadmaps", level: 85 },
+      { name: "Technical PRDs", level: 85 },
+      { name: "Sprint Planning", level: 80 },
     ],
   },
   {
-    title: "Design & UX",
-    icon: "🎨",
+    title: "Data Analysis & Problem-Solving",
+    icon: "📈",
     skills: [
-      { name: "Figma", level: 75 },
-      { name: "Wireframing", level: 80 },
-      { name: "User Flows", level: 85 },
-      { name: "Prototyping", level: 70 },
-      { name: "Design Thinking", level: 80 },
+      { name: "Data Analysis", level: 85 },
+      { name: "User Testing", level: 80 },
+      { name: "Funnel Optimization", level: 75 },
+      { name: "Usability Benchmarking", level: 75 },
     ],
   },
   {
-    title: "Technical",
-    icon: "⚡",
-    skills: [
-      { name: "React / React Native", level: 70 },
-      { name: "SQL & Analytics", level: 65 },
-      { name: "APIs & Integrations", level: 60 },
-      { name: "Git & Version Control", level: 70 },
-      { name: "Firebase", level: 65 },
-    ],
-  },
-  {
-    title: "Soft Skills",
+    title: "Leadership & Soft Skills",
     icon: "🤝",
     skills: [
-      { name: "Stakeholder Mgmt", level: 75 },
-      { name: "Communication", level: 90 },
-      { name: "Problem Solving", level: 85 },
-      { name: "Team Collaboration", level: 88 },
-      { name: "Storytelling", level: 80 },
+      { name: "Communication Skills", level: 90 },
+      { name: "Agile/Scrum", level: 85 },
+      { name: "Cross-Functional Collab", level: 85 },
+      { name: "Entrepreneurial Mindset", level: 80 },
+    ],
+  },
+  {
+    title: "Technical Fluency",
+    icon: "⚡",
+    skills: [
+      { name: "System Architecture", level: 80 },
+      { name: "RESTful APIs", level: 80 },
+      { name: "React & Next.js", level: 85 },
+      { name: "Figma Prototyping", level: 85 },
     ],
   },
 ];
 
 const tools = [
-  "Figma", "Notion", "Jira", "Mixpanel", "Google Analytics",
-  "Miro", "Slack", "Linear", "Amplitude", "SQL",
-  "React", "Firebase", "Postman", "Loom", "Excalidraw",
+  "Figma", "React", "Next.js", "Firebase", "Git",
+  "Google Gemini API", "Recharts", "Vite", "Firestore"
 ];
 
 export default function Skills() {

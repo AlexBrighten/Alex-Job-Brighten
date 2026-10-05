@@ -5,23 +5,23 @@ import styles from "./About.module.css";
 const highlights = [
   {
     icon: "💡",
-    title: "Product Thinking",
-    description: "I approach every problem by understanding the user first, then aligning business goals with technical feasibility.",
-  },
-  {
-    icon: "📐",
-    title: "Design Sensibility",
-    description: "From wireframes to prototypes, I craft experiences that are intuitive, delightful, and purposeful.",
+    title: "Product Strategy & Ownership",
+    description: "Experienced in product strategy, scoping product roadmaps, and conducting data analysis to inform technical specifications.",
   },
   {
     icon: "📈",
-    title: "Data-Informed",
-    description: "I believe in measuring what matters — tracking KPIs, running experiments, and iterating based on evidence.",
+    title: "Data Analysis & Problem-Solving",
+    description: "Proficient in user testing, feedback analysis, funnel optimization, and benchmarking drop-off metrics.",
   },
   {
     icon: "🤝",
-    title: "Cross-Functional",
-    description: "I thrive at the intersection of engineering, design, and business — bringing teams together to ship great products.",
+    title: "Leadership & Soft Skills",
+    description: "Strong communication, entrepreneurial mindset, and passion for cross-functional collaboration within Agile/Scrum environments.",
+  },
+  {
+    icon: "⚡",
+    title: "Technical Fluency",
+    description: "System architecture, RESTful APIs, React, Next.js, and rapid prototyping using Figma.",
   },
 ];
 
@@ -31,13 +31,10 @@ export default function About() {
       <div className="container">
         <span className="section-label">About Me</span>
         <h2 className="section-title">
-          Turning <span className="gradient-text">ideas</span> into products
-          people love
+          Bridging <span className="gradient-text">technology</span> and user needs
         </h2>
         <p className="section-subtitle" style={{ marginBottom: "56px" }}>
-          I&apos;m a builder at heart — someone who gets equally excited about
-          user research sessions and sprint planning. Currently on a mission to
-          log 800 hours of deep product work.
+          As a Computer Applications graduate (BCA), I leverage my background in computer science and software engineering to facilitate effective collaboration among cross-functional teams, driving successful sprint planning and backlog prioritization.
         </p>
 
         <div className={styles.grid}>

@@ -25,9 +25,7 @@ export default function Hero() {
           </h1>
 
           <p className={`${styles.subtitle} animate-slide-up animate-delay-2`}>
-            Aspiring <strong>Product Manager</strong> passionate about building
-            user-centric products that solve real problems. I bridge the gap
-            between engineering, design, and business.
+            Aspiring <strong>Product Owner (Technical)</strong> leveraging strong analytical and problem-solving skills, along with software engineering expertise, to deliver comprehensive end-to-end product design and delivery.
           </p>
 
           <div className={`${styles.ctas} animate-slide-up animate-delay-3`}>
@@ -49,13 +47,13 @@ export default function Hero() {
 
           <div className={`${styles.stats} animate-slide-up animate-delay-4`}>
             <div className={styles.stat}>
-              <span className={styles.statNumber}>3+</span>
+              <span className={styles.statNumber}>5+</span>
               <span className={styles.statLabel}>Projects Built</span>
             </div>
             <div className={styles.statDivider} />
             <div className={styles.stat}>
-              <span className={styles.statNumber}>800hr</span>
-              <span className={styles.statLabel}>Study Goal</span>
+              <span className={styles.statNumber}>2026</span>
+              <span className={styles.statLabel}>Graduation</span>
             </div>
             <div className={styles.statDivider} />
             <div className={styles.stat}>

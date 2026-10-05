@@ -5,45 +5,31 @@ import styles from "./Projects.module.css";
 
 const projects = [
   {
-    title: "Spidey Tracker",
-    tagline: "Productivity & Focus Tracking App",
+    title: "Learnly",
+    tagline: "AI-Assisted Adaptive Learning Platform",
     description:
-      "A gamified productivity app with progress tracking toward an 800-hour study goal. Features include focus sessions, habit streaks, analytics dashboard, and day goal planning — all wrapped in a fun Spider-Man theme.",
-    tags: ["React Native", "Firebase", "UX Design", "Gamification"],
-    image: "/spidey-tracker.png",
-    color: "#ef4444",
-    metrics: [
-      { label: "Focus Sessions", value: "Timer-based" },
-      { label: "Analytics", value: "Real-time" },
-      { label: "Habit Tracking", value: "Daily streaks" },
-    ],
-  },
-  {
-    title: "Product Teardowns",
-    tagline: "Deep-dive Analysis Collection",
-    description:
-      "A curated collection of product teardowns analyzing apps like Notion, Figma, and Linear — examining their onboarding flows, retention loops, and monetization strategies from a PM perspective.",
-    tags: ["Product Analysis", "UX Research", "Strategy", "Writing"],
-    image: null,
-    color: "#7c3aed",
-    metrics: [
-      { label: "Apps Analyzed", value: "5+" },
-      { label: "Framework", value: "AARRR" },
-      { label: "Depth", value: "Full funnel" },
-    ],
-  },
-  {
-    title: "Feature Prioritization Framework",
-    tagline: "Decision-Making Tool for PMs",
-    description:
-      "Built a custom RICE scoring framework to help product teams objectively evaluate and prioritize feature requests. Includes weighted scoring, impact visualization, and team voting.",
-    tags: ["Spreadsheets", "Data Analysis", "RICE", "PM Tools"],
+      "Scoped product strategy and developed an adaptive educational web application using the Gemini API to dynamically tailor course materials to student mastery curves. Evaluated user interaction data and API response latency to optimize prompt pipelines, consolidating core learning flows into an intuitive dashboard.",
+    tags: ["Next.js", "React", "Gemini API", "Firebase", "Product Strategy"],
     image: null,
     color: "#3b82f6",
     metrics: [
-      { label: "Methodology", value: "RICE" },
-      { label: "Input", value: "Multi-team" },
-      { label: "Output", value: "Ranked list" },
+      { label: "Tech Stack", value: "Next.js & Firebase" },
+      { label: "Core AI", value: "Gemini API" },
+      { label: "Optimization", value: "Prompt Pipelines" },
+    ],
+  },
+  {
+    title: "Spidey Tracker",
+    tagline: "Offline-First Analytics PWA",
+    description:
+      "Conceptualized and launched an installable habit analytics PWA designed for sub-second offline interaction and low-latency. Designed interactive metric dashboards with Recharts. Implemented optimistic UI caching and local storage fallbacks to guarantee seamless data synchronization.",
+    tags: ["React", "Vite", "Firestore", "Recharts", "UX Design"],
+    image: "/spidey-tracker.png",
+    color: "#ef4444",
+    metrics: [
+      { label: "Performance", value: "Offline-First" },
+      { label: "Dashboards", value: "Interactive" },
+      { label: "Data Sync", value: "Optimistic UI" },
     ],
   },
 ];
