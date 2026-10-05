@@ -8,7 +8,7 @@ const educationDetails = {
   degree: "Bachelor of Computer Applications (BCA)",
   track: "Computer Science Track",
   gradDate: "Jun 2026",
-  grade: "First-Class Equivalent Grade | CGPA: 7.47 / 10.0",
+  grade: "First-Class Equivalent Grade | CGPA: 7.53 / 10.0",
   coursework: [
     "Software Engineering",
     "Data Structures & Algorithms",
