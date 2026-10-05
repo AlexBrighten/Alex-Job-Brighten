@@ -1,75 +1,162 @@
 .hero {
-  min-height: 80vh;
+  min-height: calc(100vh - 80px);
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding-top: 80px;
+  padding-top: clamp(130px, 15vh, 180px);
+  padding-bottom: 80px;
 }
 
 .heroInner {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  max-width: 800px;
+  max-width: 860px;
 }
 
-.title {
-  font-size: clamp(3rem, 6vw, 5rem);
-  font-weight: 700;
-  line-height: 1.1;
-  letter-spacing: -0.04em;
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 12px;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-full);
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--text-secondary);
   margin-bottom: 24px;
 }
 
+.badgeDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--text-primary);
+}
+
+.title {
+  font-size: clamp(2.75rem, 5.5vw, 4.5rem);
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.04em;
+  margin-bottom: 20px;
+  color: var(--text-primary);
+}
+
 .subtitle {
-  font-size: 1.25rem;
+  font-size: 1.15rem;
   color: var(--text-secondary);
-  line-height: 1.6;
-  margin-bottom: 40px;
-  max-width: 650px;
+  line-height: 1.65;
+  margin-bottom: 36px;
+  max-width: 720px;
 }
 
 .ctas {
   display: flex;
-  gap: 16px;
-  margin-bottom: 64px;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 56px;
 }
 
-.stats {
-  display: flex;
-  gap: 48px;
-  padding-top: 48px;
+/* Skills Container replacing stats */
+.skillsContainer {
+  width: 100%;
+  padding-top: 36px;
   border-top: 1px solid var(--border-color);
+}
+
+.skillsHeader {
+  margin-bottom: 18px;
+}
+
+.skillsLabel {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: 600;
+}
+
+.skillsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
   width: 100%;
 }
 
-.stat {
+.skillGroup {
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: 10px;
+  padding: 16px;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  transition: border-color var(--transition-fast);
 }
 
-.statNumber {
-  font-size: 1.5rem;
+.skillGroup:hover {
+  border-color: var(--border-hover);
+}
+
+.groupTitle {
+  font-size: 0.85rem;
   font-weight: 600;
   color: var(--text-primary);
+  letter-spacing: -0.01em;
 }
 
-.statLabel {
-  font-size: 0.85rem;
-  color: var(--text-muted);
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  font-weight: 500;
+.pillList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.skillPill {
+  font-size: 0.75rem;
+  font-weight: 450;
+  color: var(--text-secondary);
+  background: var(--bg-primary);
+  border: 1px solid var(--border-color);
+  padding: 3px 8px;
+  border-radius: var(--radius-sm);
+  transition: all var(--transition-fast);
+}
+
+.skillPill:hover {
+  color: var(--text-primary);
+  border-color: var(--text-primary);
+}
+
+@media (max-width: 860px) {
+  .skillsGrid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
 }
 
 @media (max-width: 768px) {
-  .title {
-    font-size: 2.5rem;
+  .hero {
+    padding-top: 110px;
+    padding-bottom: 50px;
+    min-height: auto;
   }
   
-  .stats {
+  .title {
+    font-size: 2.35rem;
+  }
+  
+  .subtitle {
+    font-size: 1.05rem;
+  }
+
+  .ctas {
     flex-direction: column;
-    gap: 24px;
+    width: 100%;
+  }
+
+  .ctas a {
+    width: 100%;
   }
 }
