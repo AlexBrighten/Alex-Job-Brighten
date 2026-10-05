@@ -5,7 +5,7 @@ import styles from "./Skills.module.css";
 const skillCategories = [
   {
     num: "01",
-    title: "Product Strategy & Ownership",
+    title: "Product Strategy & Management",
     skills: [
       { name: "Product Strategy & Scoping", level: 90 },
       { name: "Product Roadmaps & Timelines", level: 85 },
@@ -58,7 +58,7 @@ export default function Skills() {
           Technical &amp; Product Competencies
         </h2>
         <p className="section-subtitle">
-          A blend of strategic product ownership, qualitative user empathy, and software engineering fluency that enables end-to-end delivery.
+          A blend of strategic product management, qualitative user empathy, and software engineering fluency that enables end-to-end delivery.
         </p>
 
         <div className={styles.skillGrid}>

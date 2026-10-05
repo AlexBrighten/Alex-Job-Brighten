@@ -23,7 +23,7 @@ export default function Hero() {
       <div className={`container ${styles.heroInner}`}>
         <div className={styles.badge}>
           <span className={styles.badgeDot} />
-          <span>Product Owner (Technical) &amp; Software Builder</span>
+          <span>Product Manager (Technical) &amp; Software Builder</span>
         </div>
 
         <h1 className={styles.title}>
@@ -31,7 +31,7 @@ export default function Hero() {
         </h1>
 
         <p className={styles.subtitle}>
-          Aspiring Technical Product Owner leveraging a Computer Applications (BCA) foundation and software engineering expertise to guide products from ambiguous problem discovery through technical specification and iterative delivery.
+          Aspiring Product Manager (Technical) leveraging a Computer Applications (BCA) foundation and software engineering expertise to guide products from ambiguous problem discovery through technical specification and iterative delivery.
         </p>
 
         <div className={styles.ctas}>

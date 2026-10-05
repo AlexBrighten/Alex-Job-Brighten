@@ -82,7 +82,7 @@ export default function Contact() {
             <p className={styles.footerText}>
               Designed & built by Alex Job A · {new Date().getFullYear()}
             </p>
-            <p className={styles.footerSub}>Aspiring Product Owner</p>
+            <p className={styles.footerSub}>Aspiring Product Manager</p>
           </div>
         </div>
       </footer>

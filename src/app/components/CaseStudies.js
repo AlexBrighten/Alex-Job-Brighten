@@ -8,7 +8,7 @@ const caseStudies = [
     id: "elyon",
     title: "Elyon Luxury E-Commerce",
     subtitle: "Real-Time Inventory Synchronization & High-Conversion Checkout Flow",
-    role: "Technical Product Owner & MERN Engineer",
+    role: "Technical Product Manager & Full-Stack Builder",
     timeline: "2025",
     tags: ["Product Architecture", "MERN Stack", "Socket.io", "Firebase Auth", "Real-Time Telemetry"],
     summary:

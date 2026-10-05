@@ -5,7 +5,7 @@ import styles from "./About.module.css";
 const highlights = [
   {
     icon: "💡",
-    title: "Product Strategy & Ownership",
+    title: "Product Strategy & Management",
     description: "Experienced in product strategy, scoping product roadmaps, and conducting data analysis to inform technical specifications.",
   },
   {

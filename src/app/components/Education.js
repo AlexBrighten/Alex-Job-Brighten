@@ -8,7 +8,7 @@ const educationDetails = {
   degree: "Bachelor of Computer Applications (BCA)",
   track: "Computer Science Track",
   gradDate: "Jun 2026",
-  grade: "First-Class Equivalent Grade | CGPA: 7.53 / 10.0",
+  grade: "CGPA: 7.53 / 10.0",
   coursework: [
     "Software Engineering",
     "Data Structures & Algorithms",
@@ -20,7 +20,7 @@ const educationDetails = {
   highlights: [
     "Built foundational technical literacy in computer science principles, enabling fluent communication with engineering squads and rigorous technical PRD authoring.",
     "Combined core software engineering coursework with active leadership roles across university symposiums and in-house product teams.",
-    "Available for Graduate Product Owner / Technical PM roles (2026 - 2027)."
+    "Available for Associate Product Manager (APM) / Technical PM roles (2026 - 2027)."
   ]
 };
 
@@ -32,7 +32,7 @@ export default function Education() {
           <span className={styles.sectionBadge}>Academic Background</span>
           <h2 className="section-title">Education &amp; Foundations</h2>
           <p className="section-subtitle">
-            Formal grounding in computer science and software engineering that powers my technical product ownership.
+            Formal grounding in computer science and software engineering that powers my technical product management.
           </p>
         </div>
 
