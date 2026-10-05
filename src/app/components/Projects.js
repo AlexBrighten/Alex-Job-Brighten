@@ -5,17 +5,17 @@ import styles from "./Projects.module.css";
 
 const projects = [
   {
-    title: "Learnly",
-    tagline: "AI-Assisted Adaptive Learning Platform",
+    title: "Elyon Luxury E-Commerce",
+    tagline: "Premium Skincare Platform",
     description:
-      "Scoped product strategy and developed an adaptive educational web application using the Gemini API to dynamically tailor course materials to student mastery curves. Evaluated user interaction data and API response latency to optimize prompt pipelines, consolidating core learning flows into an intuitive dashboard.",
-    tags: ["Next.js", "React", "Gemini API", "Firebase", "Product Strategy"],
+      "A modern, high-end, minimalistic e-commerce platform built on the MERN stack for premium skincare brands. Features real-time order tracking via Socket.io, robust Firebase authentication, advanced filtering, and a comprehensive admin dashboard for sales analytics.",
+    tags: ["React", "Node.js", "MongoDB", "Socket.io", "Firebase", "Redux"],
     image: null,
-    color: "#3b82f6",
+    color: "#a855f7",
     metrics: [
-      { label: "Tech Stack", value: "Next.js & Firebase" },
-      { label: "Core AI", value: "Gemini API" },
-      { label: "Optimization", value: "Prompt Pipelines" },
+      { label: "Updates", value: "Real-time" },
+      { label: "Auth", value: "Firebase + JWT" },
+      { label: "Stack", value: "MERN" },
     ],
   },
   {
