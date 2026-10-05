@@ -4,50 +4,50 @@ import styles from "./Skills.module.css";
 
 const skillCategories = [
   {
+    num: "01",
     title: "Product Strategy & Ownership",
-    icon: "🎯",
     skills: [
-      { name: "Product Strategy", level: 90 },
-      { name: "Product Roadmaps", level: 85 },
-      { name: "Technical PRDs", level: 85 },
-      { name: "Sprint Planning", level: 80 },
+      { name: "Product Strategy & Scoping", level: 90 },
+      { name: "Product Roadmaps & Timelines", level: 85 },
+      { name: "Technical PRDs & User Stories", level: 85 },
+      { name: "Sprint Planning & Backlog Prioritization", level: 80 },
     ],
   },
   {
+    num: "02",
     title: "Data Analysis & Problem-Solving",
-    icon: "📈",
     skills: [
-      { name: "Data Analysis", level: 85 },
-      { name: "User Testing", level: 80 },
-      { name: "Funnel Optimization", level: 75 },
-      { name: "Usability Benchmarking", level: 75 },
+      { name: "Data & Telemetry Analysis", level: 85 },
+      { name: "Usability Testing & Observation", level: 80 },
+      { name: "Funnel & Drop-Off Optimization", level: 75 },
+      { name: "Competitive Benchmarking", level: 75 },
     ],
   },
   {
-    title: "Leadership & Soft Skills",
-    icon: "🤝",
+    num: "03",
+    title: "Leadership & Collaboration",
     skills: [
-      { name: "Communication Skills", level: 90 },
-      { name: "Agile/Scrum", level: 85 },
-      { name: "Cross-Functional Collab", level: 85 },
-      { name: "Entrepreneurial Mindset", level: 80 },
+      { name: "Cross-Functional Squad Leadership", level: 90 },
+      { name: "Agile & Scrum Ceremonies", level: 85 },
+      { name: "Engineering Stakeholder Alignment", level: 85 },
+      { name: "Continuous Discovery Mindset", level: 80 },
     ],
   },
   {
+    num: "04",
     title: "Technical Fluency",
-    icon: "⚡",
     skills: [
-      { name: "System Architecture", level: 80 },
-      { name: "RESTful APIs", level: 80 },
-      { name: "React & Next.js", level: 85 },
-      { name: "Figma Prototyping", level: 85 },
+      { name: "System Architecture & Data Flows", level: 80 },
+      { name: "RESTful & WebSocket APIs", level: 80 },
+      { name: "React, Next.js & Node.js", level: 85 },
+      { name: "Figma Prototyping & Design Systems", level: 85 },
     ],
   },
 ];
 
 const tools = [
-  "Figma", "React", "Next.js", "Firebase", "Git",
-  "Google Gemini API", "Recharts", "Vite", "Firestore"
+  "Figma", "React", "Next.js", "Node.js", "Express", "MongoDB",
+  "Firebase", "Git & GitHub", "REST APIs", "Socket.io", "Recharts", "Vite"
 ];
 
 export default function Skills() {
@@ -55,18 +55,17 @@ export default function Skills() {
     <section className="section" id="skills">
       <div className="container">
         <h2 className="section-title">
-          My toolkit for building great products
+          Technical &amp; Product Competencies
         </h2>
         <p className="section-subtitle">
-          A blend of product, design, and technical skills that help me
-          contribute across the entire product lifecycle.
+          A blend of strategic product ownership, qualitative user empathy, and software engineering fluency that enables end-to-end delivery.
         </p>
 
         <div className={styles.skillGrid}>
           {skillCategories.map((cat) => (
             <div key={cat.title} className={`mono-card ${styles.skillCard}`}>
               <div className={styles.skillCardHeader}>
-                <span className={styles.skillIcon}>{cat.icon}</span>
+                <span className={styles.skillNum}>{cat.num}</span>
                 <h3 className={styles.skillCatTitle}>{cat.title}</h3>
               </div>
               <div className={styles.skillList}>
@@ -90,7 +89,7 @@ export default function Skills() {
         </div>
 
         <div className={styles.toolsSection}>
-          <h3 className={styles.toolsTitle}>Tools I Work With</h3>
+          <h3 className={styles.toolsTitle}>Tools &amp; Technologies I Work With</h3>
           <div className={styles.toolsGrid}>
             {tools.map((tool) => (
               <div key={tool} className={styles.toolChip}>
