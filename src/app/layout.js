@@ -10,8 +10,8 @@ const inter = Inter({
 export const metadata = {
   title: "Alex Job A — Aspiring Product Manager",
   description:
-    "Portfolio of Alex Job A, an aspiring Product Manager passionate about building user-centric products that solve real problems. Explore projects, skills, and experiences.",
-  keywords: ["Product Manager", "PM", "Portfolio", "Alex Job A", "UX", "Product Strategy"],
+    "Portfolio of Alex Job A, an aspiring Product Manager passionate about building user-centric products that solve real problems. Explore product teardowns, skills, and experiences.",
+  keywords: ["Product Manager", "PM", "Portfolio", "Alex Job A", "UX", "Product Strategy", "Product Teardowns"],
   openGraph: {
     title: "Alex Job A — Aspiring Product Manager",
     description: "Building user-centric products that solve real problems.",

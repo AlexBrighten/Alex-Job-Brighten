@@ -1,40 +1,59 @@
 /* ============================================
-   DESIGN SYSTEM — Minimalist Mono (Vercel/Notion Style)
+   DESIGN SYSTEM — Premium Alternating Dark/White
    ============================================ */
 
-:root {
-  /* Colors - Pure Monochrome Light Theme */
-  --bg-primary: #ffffff;
-  --bg-secondary: #fafafa;
-  --bg-card: #ffffff;
-  --bg-hover: #f5f5f5;
-  
-  --text-primary: #111111;
-  --text-secondary: #666666;
-  --text-muted: #888888;
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap');
 
-  --accent-primary: #000000;
-  --border-color: #eaeaea;
-  --border-hover: #999999;
+:root {
+  /* Dark Theme Colors */
+  --dark-bg: #0a0a0a;
+  --dark-bg-secondary: #111111;
+  --dark-bg-card: #161616;
+  --dark-bg-card-hover: #1a1a1a;
+  --dark-text-primary: #f5f5f5;
+  --dark-text-secondary: #a0a0a0;
+  --dark-text-muted: #666666;
+  --dark-border: #222222;
+  --dark-border-hover: #444444;
+
+  /* Light Theme Colors */
+  --light-bg: #ffffff;
+  --light-bg-secondary: #f8f8f8;
+  --light-bg-card: #ffffff;
+  --light-bg-card-hover: #fafafa;
+  --light-text-primary: #0a0a0a;
+  --light-text-secondary: #555555;
+  --light-text-muted: #888888;
+  --light-border: #e5e5e5;
+  --light-border-hover: #cccccc;
+
+  /* Accent */
+  --accent: #c8ff00;
+  --accent-dim: rgba(200, 255, 0, 0.15);
+  --accent-glow: rgba(200, 255, 0, 0.3);
 
   /* Typography */
-  --font-sans: var(--font-inter), -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   --font-mono: 'JetBrains Mono', 'Menlo', monospace;
 
   /* Spacing */
-  --section-padding: 100px 0;
-  --container-max: 1000px;
-  --container-padding: 0 24px;
+  --section-padding: 120px 0;
+  --container-max: 1200px;
+  --container-padding: 0 32px;
 
   /* Borders & Radius */
-  --radius-sm: 4px;
-  --radius-md: 6px;
-  --radius-lg: 8px;
+  --radius-xs: 4px;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
   --radius-full: 9999px;
 
   /* Transitions */
-  --transition-fast: 0.15s ease;
-  --transition-base: 0.2s ease;
+  --transition-fast: 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-base: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-smooth: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-spring: 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
 /* --- Reset & Base --- */
@@ -54,9 +73,10 @@ html {
 
 body {
   font-family: var(--font-sans);
-  background: var(--bg-primary);
-  color: var(--text-primary);
+  background: var(--dark-bg);
+  color: var(--dark-text-primary);
   line-height: 1.6;
+  overflow-x: hidden;
 }
 
 a {
@@ -76,111 +96,128 @@ ul, ol {
   list-style: none;
 }
 
-/* --- Utilities --- */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* --- Layout Utilities --- */
 .container {
   max-width: var(--container-max);
   margin: 0 auto;
   padding: var(--container-padding);
 }
 
-.section {
+/* --- Dark Section --- */
+.section-dark {
+  background: var(--dark-bg);
+  color: var(--dark-text-primary);
   padding: var(--section-padding);
+  position: relative;
+}
+
+/* --- Light Section --- */
+.section-light {
+  background: var(--light-bg);
+  color: var(--light-text-primary);
+  padding: var(--section-padding);
+  position: relative;
+}
+
+/* --- Section Headers --- */
+.section-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+.section-badge-dark {
+  color: var(--accent);
+}
+
+.section-badge-light {
+  color: var(--light-text-muted);
+}
+
+.section-badge::before {
+  content: '';
+  display: inline-block;
+  width: 24px;
+  height: 1px;
+}
+
+.section-badge-dark::before {
+  background: var(--accent);
+}
+
+.section-badge-light::before {
+  background: var(--light-text-muted);
 }
 
 .section-title {
-  font-size: 2rem;
-  font-weight: 600;
-  letter-spacing: -0.04em;
-  margin-bottom: 24px;
-  color: var(--text-primary);
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+  margin-bottom: 20px;
 }
 
 .section-subtitle {
-  font-size: 1.1rem;
-  color: var(--text-secondary);
-  max-width: 600px;
-  margin-bottom: 48px;
-  line-height: 1.6;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  max-width: 640px;
+  margin-bottom: 56px;
 }
 
-/* --- Cards --- */
-.mono-card {
-  background: var(--bg-primary);
-  border: 1px solid var(--border-color);
-  border-radius: var(--radius-md);
-  transition: border-color var(--transition-base);
+.section-subtitle-dark {
+  color: var(--dark-text-secondary);
 }
 
-.mono-card:hover {
-  border-color: var(--border-hover);
-}
-
-/* --- Buttons --- */
-.btn-primary {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  padding: 12px 24px;
-  background: var(--text-primary);
-  color: var(--bg-primary);
-  font-weight: 500;
-  font-size: 0.9rem;
-  border-radius: var(--radius-sm);
-  transition: opacity var(--transition-fast);
-}
-
-.btn-primary:hover {
-  opacity: 0.9;
-}
-
-.btn-secondary {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  padding: 12px 24px;
-  background: transparent;
-  color: var(--text-primary);
-  font-weight: 500;
-  font-size: 0.9rem;
-  border: 1px solid var(--border-color);
-  border-radius: var(--radius-sm);
-  transition: all var(--transition-fast);
-}
-
-.btn-secondary:hover {
-  background: var(--bg-secondary);
-  border-color: var(--border-hover);
-}
-
-/* --- Selection --- */
-::selection {
-  background: var(--text-primary);
-  color: var(--bg-primary);
+.section-subtitle-light {
+  color: var(--light-text-secondary);
 }
 
 /* --- Scrollbar --- */
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 6px;
 }
 
 ::-webkit-scrollbar-track {
-  background: var(--bg-primary);
+  background: var(--dark-bg);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--border-color);
-  border-radius: 4px;
+  background: #333;
+  border-radius: 3px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--text-secondary);
+  background: #555;
 }
 
-/* Responsive adjustments */
+/* --- Selection --- */
+::selection {
+  background: var(--accent);
+  color: var(--dark-bg);
+}
+
+/* --- Responsive --- */
 @media (max-width: 768px) {
   :root {
+    --section-padding: 80px 0;
+    --container-padding: 0 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  :root {
     --section-padding: 60px 0;
+    --container-padding: 0 16px;
   }
 }
