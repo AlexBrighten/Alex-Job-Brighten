@@ -14,6 +14,7 @@ const teardownsData = [
     category: "Hyperlocal & Delivery",
     tagline: "Order Tracking & ETA Reliability",
     color: "#FC8019",
+    glow: "rgba(252, 128, 25, 0.45)",
     scopeType: "Workflow Teardown (Post-Order to Doorstep Delivery)",
     
     // 1. Introduction & Context
@@ -105,6 +106,7 @@ const teardownsData = [
     category: "Fintech & Payments",
     tagline: "UPI Payments Inside Chat Threads",
     color: "#25D366",
+    glow: "rgba(37, 211, 102, 0.45)",
     scopeType: "Feature Teardown (P2P Financial Transactions inside Messaging)",
     
     // 1. Introduction & Context
@@ -196,6 +198,7 @@ const teardownsData = [
     category: "Growth & Activation",
     tagline: "Onboarding & First-Order Activation Funnel",
     color: "#E23744",
+    glow: "rgba(226, 55, 68, 0.45)",
     scopeType: "Funnel Teardown (Install to Completed First Order)",
     
     // 1. Introduction & Context
@@ -287,6 +290,7 @@ const teardownsData = [
     category: "Media & Streaming",
     tagline: "Discover Weekly & Algorithmic Recommendation Loops",
     color: "#1DB954",
+    glow: "rgba(29, 185, 84, 0.45)",
     scopeType: "Product Strategy & Machine Learning Personalization Loop",
     
     // 1. Introduction & Context
@@ -378,6 +382,7 @@ const teardownsData = [
     category: "Fintech & Payments",
     tagline: "Checkout & Payment Failure Recovery",
     color: "#528FF0",
+    glow: "rgba(82, 143, 240, 0.45)",
     scopeType: "Checkout Flow & Resilience Engineering Teardown",
     
     // 1. Introduction & Context
@@ -469,6 +474,7 @@ const teardownsData = [
     category: "Media & Streaming",
     tagline: "Reels vs. Home Feed Strategic Tension",
     color: "#E1306C",
+    glow: "rgba(225, 48, 108, 0.45)",
     scopeType: "Platform Strategy Teardown (Video vs. Photo Social Graph)",
     
     // 1. Introduction & Context
@@ -610,8 +616,14 @@ export default function ProductTeardowns() {
                 initial={{ opacity: 0, y: 30 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.5, delay: 0.1 + index * 0.08 }}
-                style={{ "--brand-color": item.color }}
+                style={{ "--brand-color": item.color, "--brand-glow": item.glow }}
               >
+                {/* Luminous Top Accent Beam */}
+                <div className={styles.topAccentGlow} />
+
+                {/* Animated Light Sweep / Shine Overlay */}
+                <div className={styles.cardShineOverlay} />
+
                 {/* Header — Always Visible */}
                 <div
                   className={styles.cardHeader}
@@ -623,7 +635,9 @@ export default function ProductTeardowns() {
                   }}
                 >
                   <div className={styles.cardHeaderLeft}>
-                    <span className={styles.cardNumber}>{item.number}</span>
+                    <div className={styles.cardNumberBox}>
+                      <span className={styles.cardNumber}>{item.number}</span>
+                    </div>
                     <div className={styles.cardTitleBlock}>
                       <div className={styles.brandRow}>
                         <span className={styles.brandDot} style={{ background: item.color }} />
@@ -639,18 +653,20 @@ export default function ProductTeardowns() {
                   </div>
 
                   <div className={styles.headerRight}>
-                    <span className={styles.viewPrompt}>
-                      {isExpanded ? "Collapse Teardown" : "Deep Dive (8 Core Steps)"}
-                    </span>
-                    <motion.div
-                      className={styles.toggleIcon}
-                      animate={{ rotate: isExpanded ? 180 : 0 }}
-                      transition={{ duration: 0.3 }}
-                    >
-                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                        <polyline points="6 9 12 15 18 9" />
-                      </svg>
-                    </motion.div>
+                    <div className={`${styles.deepDivePill} ${isExpanded ? styles.deepDiveActive : ""}`}>
+                      <span className={styles.viewPrompt}>
+                        {isExpanded ? "Collapse Analysis" : "Deep Dive · 8 Steps"}
+                      </span>
+                      <motion.div
+                        className={styles.toggleIcon}
+                        animate={{ rotate: isExpanded ? 180 : 0 }}
+                        transition={{ duration: 0.3 }}
+                      >
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                          <polyline points="6 9 12 15 18 9" />
+                        </svg>
+                      </motion.div>
+                    </div>
                   </div>
                 </div>
 
