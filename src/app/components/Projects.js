@@ -5,40 +5,40 @@ import { motion, useInView } from "framer-motion";
 
 const projectsData = [
   {
-    id: "elyon",
-    title: "Elyon Luxury E-Commerce",
-    category: "Full-Stack Build",
-    description: "Built end-to-end: real-time inventory sync via WebSockets, optimistic UI, atomic transactions, and RBAC — solving cart-collision friction for a luxury skincare brand.",
-    tags: ["React", "Node.js", "Socket.io", "MongoDB"],
-    year: "2025",
-    href: "https://github.com/AlexBrighten",
-  },
-  {
-    id: "product-teardowns",
-    title: "6 Product Teardowns",
-    category: "Product Analysis",
-    description: "Deep-dive analyses of Swiggy, WhatsApp Pay, Zomato, Spotify, Razorpay, and Instagram — covering JTBD, funnel friction, business models, and RICE-scored recommendations.",
-    tags: ["JTBD", "Funnel Analysis", "RICE Framework", "Metrics"],
-    year: "2025",
-    href: "mailto:alexjob.pm@gmail.com?subject=Product%20Teardown%20Decks%20Request",
-  },
-  {
     id: "spidey-tracker",
-    title: "Spidey Tracker PWA",
-    category: "Offline-First App",
-    description: "Engineered an offline-first habit tracker with sub-50ms local writes via IndexedDB, service worker background sync, and streak analytics dashboards.",
-    tags: ["PWA", "IndexedDB", "Firestore", "Recharts"],
-    year: "2024",
-    href: "https://github.com/AlexBrighten",
+    title: "Spidey Tracker",
+    category: "Deep Work PWA",
+    description: "Drift-free background timer powered by Web Worker blobs to bypass browser tab throttling. Features visibility-change site-pinning that auto-aborts distracted sessions, and cross-platform Service Worker notifications.",
+    tags: ["React 18", "Vite", "PWA", "Web Workers", "Tailwind CSS", "Firebase"],
+    year: "2025",
+    href: "https://github.com/AlexBrighten/Alex-Spidey-Tracker-",
   },
   {
-    id: "curious-bees",
-    title: "SRM Curious Bees Platform",
-    category: "UX & Operations",
-    description: "Led user research across 60+ students, built a 40-component design system, drafted PRDs with acceptance criteria, and cut onboarding drop-off by 40%.",
-    tags: ["User Research", "Design System", "Agile", "PRDs"],
-    year: "2024",
-    href: "https://github.com/AlexBrighten",
+    id: "jobpulse",
+    title: "JobPulse",
+    category: "Chrome Ext + Web Dashboard",
+    description: "Application & resume performance tracker featuring real-time Google Cloud Firestore synchronization, 100% private local IndexedDB resume storage, toolbar auto-scraping, and A/B variant callback analytics.",
+    tags: ["Manifest V3", "Cloud Firestore", "IndexedDB", "Vercel", "A/B Analytics"],
+    year: "2025",
+    href: "https://github.com/AlexBrighten/JobPulse",
+  },
+  {
+    id: "celtrix",
+    title: "Celtrix (Open Source)",
+    category: "Open Source CLI Tool",
+    description: "Published npm scaffolding CLI (`npx celtrix`) that sets up modern full-stack web applications in seconds with MERN, MEAN, MEVN, Next.js, and Hono stacks, automated tooling, and pre-configured integrations.",
+    tags: ["npm Package", "Node.js CLI", "Open Source", "Next.js", "Hono", "MERN"],
+    year: "2025",
+    href: "https://github.com/AlexBrighten/Celtrix",
+  },
+  {
+    id: "portman",
+    title: "Portman",
+    category: "VS Code Extension",
+    description: "Interactive visual port management extension for VS Code that detects and kills network ports without leaving the editor. Features smart detection for 40+ frameworks, terminal EADDRINUSE auto-retry, and Docker awareness.",
+    tags: ["VS Code Extension", "TypeScript", "Process Monitoring", "Docker", "DevTools"],
+    year: "2025",
+    href: "https://github.com/AlexBrighten/portman",
   },
 ];
 
@@ -69,13 +69,15 @@ export default function Projects() {
             </h2>
           </div>
           <a
-            href="#contact"
+            href="https://github.com/AlexBrighten"
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center gap-2 text-sm font-medium text-[#888] transition-colors hover:text-[#c8ff00]"
           >
-            Want the full case studies?
+            View all on GitHub
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-              <path d="M5 12h14" />
-              <path d="M12 5l7 7-7 7" />
+              <path d="M7 17L17 7" />
+              <path d="M7 7h10v10" />
             </svg>
           </a>
         </motion.div>

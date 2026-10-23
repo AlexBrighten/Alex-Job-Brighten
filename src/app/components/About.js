@@ -69,7 +69,7 @@ export default function About() {
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.5, delay: 0.3 }}
           >
-            BCA student at SRM Institute with hands-on experience in product teardowns, full-stack development, and business operations. I thrive in ambiguity—give me the founder&apos;s biggest headache and I&apos;ll come back with a structured plan and a working prototype.
+            BCA student at SRM Institute with hands-on experience building developer tooling, open-source software, and high-performance applications. I thrive in ambiguity—give me the founder&apos;s biggest headache and I&apos;ll come back with a structured plan and a working prototype.
           </motion.p>
 
           {/* Bottom floating badges */}
@@ -134,8 +134,8 @@ export default function About() {
           transition={{ duration: 0.6, delay: 0.7 }}
         >
           {[
-            { number: "6", label: "Product Teardowns" },
-            { number: "3", label: "Shipped Projects" },
+            { number: "4", label: "Shipped Projects" },
+            { number: "1", label: "Open Source CLI" },
             { number: "BCA", label: "SRM Institute" },
             { number: "10+", label: "Skills & Tools" },
           ].map((stat) => (
