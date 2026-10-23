@@ -2,6 +2,7 @@
 
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
+import VenomButton from "./venom";
 
 const socials = [
   {
@@ -68,18 +69,20 @@ export default function Contact() {
             </p>
 
             {/* CTA */}
-            <motion.a
-              href="mailto:alexjob.pm@gmail.com"
-              className="mb-14 inline-flex items-center gap-3 rounded-full bg-[#c8ff00] px-9 py-4 text-sm font-bold text-[#0a0a0a] transition-all hover:bg-[#d8ff33] hover:shadow-[0_8px_30px_rgba(200,255,0,0.25)]"
+            <motion.div
+              className="mb-14"
               whileHover={{ scale: 1.03 }}
               whileTap={{ scale: 0.98 }}
             >
-              Say Hello
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M7 17L17 7" />
-                <path d="M7 7h10v10" />
-              </svg>
-            </motion.a>
+              <VenomButton
+                aria-label="Send Alex an email"
+                onClick={() => {
+                  window.location.href = "mailto:alexjob.pm@gmail.com";
+                }}
+              >
+                Say Hello
+              </VenomButton>
+            </motion.div>
 
             {/* Social links */}
             <div className="flex flex-col gap-3 sm:flex-row">
