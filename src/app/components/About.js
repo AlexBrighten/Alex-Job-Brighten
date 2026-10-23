@@ -69,7 +69,7 @@ export default function About() {
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.5, delay: 0.3 }}
           >
-            BCA student at SRM Institute with hands-on experience building developer tooling, open-source software, and high-performance applications. I thrive in ambiguity—give me the founder&apos;s biggest headache and I&apos;ll come back with a structured plan and a working prototype.
+            Recent CS grad with a track record of shipping dev tools and open-source software. I thrive in high-chaos environments and ruthlessly automate repetitive tasks. Hand me your biggest operational headache, and I’ll hand you back a working prototype and a scalable system.
           </motion.p>
 
           {/* Bottom floating badges */}
