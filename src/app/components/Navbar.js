@@ -42,6 +42,7 @@ export default function Navbar() {
           {/* Logo */}
           <a
             href="#hero"
+            aria-label="Alex Job A - Home"
             className="flex items-center gap-0.5 text-[1.35rem] font-extrabold tracking-[-0.04em] text-[#f5f5f5] transition-opacity hover:opacity-80"
           >
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" className="mr-1.5">

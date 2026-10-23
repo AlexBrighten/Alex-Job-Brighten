@@ -64,7 +64,7 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.3 }}
           >
-            I Turn Chaos Into Clarity for Founders
+            <span className="sr-only">Alex Job A — </span>I Turn Chaos Into Clarity for Founders
           </motion.h1>
 
           {/* Subtitle */}
@@ -123,7 +123,8 @@ export default function Hero() {
                 href={social.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                  className={`group flex items-center gap-4 px-6 py-4 transition-colors hover:bg-[#222634] ${
+                aria-label={`Alex Job on ${social.name}`}
+                className={`group flex items-center gap-4 px-6 py-4 transition-colors hover:bg-[#222634] ${
                   index !== socialLinks.length - 1 ? "border-b border-white/[0.08]" : ""
                 }`}
               >
