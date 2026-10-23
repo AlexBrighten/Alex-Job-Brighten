@@ -40,6 +40,11 @@ export const siteConfig = {
     "Spidey Tracker",
     "Portman VS Code",
     "SRM Institute",
+    "Livewires Vice President",
+    "Hackhive Co-Founder",
+    "Curious Bees Product Designer",
+    "Symposium SDG 04",
+    "Hackfinity",
   ],
   googleVerification: "google67eaf5de69c6d68f",
 };

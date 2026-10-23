@@ -1,9 +1,10 @@
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import About from "./components/About";
-import LifeOutsideWork from "./components/LifeOutsideWork";
+import Experience from "./components/Experience";
 import Services from "./components/Services";
 import Projects from "./components/Projects";
+import LifeOutsideWork from "./components/LifeOutsideWork";
 import Contact from "./components/Contact";
 
 export default function Home() {
@@ -13,6 +14,7 @@ export default function Home() {
       <main className="flex flex-col">
         <Hero />
         <About />
+        <Experience />
         <Services />
         <Projects />
         <LifeOutsideWork />

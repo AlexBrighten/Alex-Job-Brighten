@@ -23,6 +23,12 @@ export default function JsonLd() {
       "@type": "CollegeOrUniversity",
       name: "SRM Institute of Science and Technology",
     },
+    affiliation: [
+      { "@type": "Organization", name: "Hackhive" },
+      { "@type": "Organization", name: "Livewires" },
+      { "@type": "Organization", name: "Curious Bees" },
+      { "@type": "Organization", name: "SRM Institute of Science and Technology" },
+    ],
     knowsAbout: [
       "Product Strategy",
       "Startup Operations",
