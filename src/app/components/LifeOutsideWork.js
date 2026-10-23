@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 
@@ -45,6 +45,27 @@ const moments = [
 
 export default function LifeOutsideWork() {
   const trackRef = useRef(null);
+
+  useEffect(() => {
+    const track = trackRef.current;
+    if (!track) return;
+
+    const cycleStart = track.children[moments.length]?.offsetLeft ?? 0;
+    if (!cycleStart) return;
+
+    track.scrollLeft = cycleStart;
+
+    const handleScroll = () => {
+      if (track.scrollLeft < cycleStart * 0.5) {
+        track.scrollLeft += cycleStart;
+      } else if (track.scrollLeft > cycleStart * 1.5) {
+        track.scrollLeft -= cycleStart;
+      }
+    };
+
+    track.addEventListener("scroll", handleScroll, { passive: true });
+    return () => track.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const move = (direction) => {
     trackRef.current?.scrollBy({
@@ -93,9 +114,9 @@ export default function LifeOutsideWork() {
           ref={trackRef}
           className="flex snap-x snap-mandatory gap-5 overflow-x-auto pb-5 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
         >
-          {moments.map((moment, index) => (
+          {[...moments, ...moments, ...moments].map((moment, index) => (
             <motion.article
-              key={moment.title}
+              key={`${moment.title}-${index}`}
               className="group relative min-w-[82%] snap-start overflow-hidden rounded-2xl border border-white/[0.08] bg-[#0d0f14] sm:min-w-[48%] lg:min-w-[31%]"
               initial={{ opacity: 0, y: 24 }}
               whileInView={{ opacity: 1, y: 0 }}
