@@ -28,7 +28,7 @@ const moments = [
     accent: "#22c55e",
   },
   {
-    title: "Vocal stress testing",
+    title: "JOYMAXXINGGG",
     type: "Video",
     src: "/singing.mp4",
     alt: "Alex performing unsolicited audio concerts",
