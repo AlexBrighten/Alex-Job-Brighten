@@ -2,7 +2,6 @@
 
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import styles from "./Contact.module.css";
 
 const socials = [
   {
@@ -41,52 +40,61 @@ export default function Contact() {
 
   return (
     <>
-      <section className={`section-dark ${styles.contact}`} id="contact" ref={ref}>
-        <div className="container">
+      {/* Stripe divider */}
+      <div className="stripe-divider" />
+
+      <section className="bg-[#0a0a0a] px-0 pb-20 pt-24 md:pt-32" id="contact" ref={ref}>
+        <div className="mx-auto max-w-[1200px] px-8 max-md:px-5 max-[480px]:px-4">
           <motion.div
-            className={styles.contactInner}
+            className="flex flex-col items-center text-center"
             initial={{ opacity: 0, y: 30 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6 }}
           >
-            <span className="section-badge section-badge-dark">Get in Touch</span>
+            <span className="mb-6 inline-flex items-center gap-2 font-mono text-xs uppercase tracking-[0.1em] text-[#c8ff00]">
+              Get in Touch
+            </span>
 
-            <h2 className={`section-title ${styles.contactTitle}`}>
-              Let&apos;s build something
-              <br />
-              <span className={styles.titleAccent}>impactful</span> together.
+            <h2 className="mb-6 max-w-[640px] text-4xl font-bold leading-tight tracking-[-0.03em] text-white md:text-5xl">
+              Let&apos;s build something{" "}
+              <span className="bg-gradient-to-r from-[#c8ff00] to-[#88cc00] bg-clip-text text-transparent">
+                meaningful
+              </span>{" "}
+              together.
             </h2>
 
-            <p className={`section-subtitle section-subtitle-dark ${styles.contactSubtitle}`}>
-              Whether you have a Product Management opportunity, want to discuss a teardown, or want to collaborate on software products — I&apos;d love to connect.
+            <p className="mx-auto mb-12 max-w-[520px] text-base leading-[1.7] text-[#888]">
+              Looking for a Founder&apos;s Office Associate or Intern role at an early-stage startup. If you need someone who can think strategically and execute technically — let&apos;s talk.
             </p>
 
+            {/* CTA */}
             <motion.a
               href="mailto:alexjob.pm@gmail.com"
-              className={styles.ctaPrimary}
+              className="mb-14 inline-flex items-center gap-3 rounded-full bg-[#c8ff00] px-9 py-4 text-sm font-bold text-[#0a0a0a] transition-all hover:bg-[#d8ff33] hover:shadow-[0_8px_30px_rgba(200,255,0,0.25)]"
               whileHover={{ scale: 1.03 }}
               whileTap={{ scale: 0.98 }}
             >
-              <span>Say Hello</span>
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+              Say Hello
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M7 17L17 7" />
                 <path d="M7 7h10v10" />
               </svg>
             </motion.a>
 
-            <div className={styles.socials}>
+            {/* Social links */}
+            <div className="flex flex-col gap-3 sm:flex-row">
               {socials.map((s, i) => (
                 <motion.a
                   key={s.name}
                   href={s.href}
-                  className={styles.socialLink}
+                  className="inline-flex items-center justify-center gap-2.5 rounded-xl border border-white/[0.06] bg-[#111113] px-5 py-3 text-sm font-medium text-[#999] transition-all hover:border-white/[0.12] hover:bg-[#1a1a1c] hover:text-white"
                   aria-label={s.name}
                   target="_blank"
                   rel="noopener noreferrer"
                   initial={{ opacity: 0, y: 15 }}
                   animate={isInView ? { opacity: 1, y: 0 } : {}}
                   transition={{ duration: 0.4, delay: 0.3 + i * 0.1 }}
-                  whileHover={{ y: -3 }}
+                  whileHover={{ y: -2 }}
                 >
                   {s.icon}
                   <span>{s.name}</span>
@@ -97,16 +105,22 @@ export default function Contact() {
         </div>
       </section>
 
-      <footer className={styles.footer}>
-        <div className="container">
-          <div className={styles.footerInner}>
-            <span className={styles.footerLogo}>
-              Alex<span className={styles.footerDot}>.</span>
+      {/* Footer */}
+      <footer className="border-t border-white/[0.04] bg-[#070709] px-0 py-10">
+        <div className="mx-auto max-w-[1200px] px-8 max-md:px-5 max-[480px]:px-4">
+          <div className="flex flex-col items-center gap-3 text-center">
+            <span className="text-lg font-extrabold tracking-[-0.03em] text-[#f5f5f5]">
+              Alex<span className="text-[#c8ff00]">.</span>
             </span>
-            <p className={styles.footerText}>
-              Designed &amp; built by Alex Job A · {new Date().getFullYear()}
+            <p className="text-xs text-[#555]">
+              Designed & built by Alex Job A · {new Date().getFullYear()}
             </p>
-            <p className={styles.footerSub}>Aspiring Product Manager · Technical Core</p>
+            <p className="font-mono text-[0.7rem] uppercase tracking-[0.05em] text-[#333]">
+              Aspiring Founder&apos;s Office Associate · Technical Core
+            </p>
+            <p className="pt-3 text-xs font-normal tracking-wide text-white">
+              All honor and glory to God forever and ever!
+            </p>
           </div>
         </div>
       </footer>

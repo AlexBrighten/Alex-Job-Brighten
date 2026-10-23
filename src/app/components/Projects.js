@@ -1,251 +1,138 @@
 "use client";
 
-import { useState, useRef } from "react";
-import { motion, useInView, AnimatePresence } from "framer-motion";
-import styles from "./Projects.module.css";
+import { useRef } from "react";
+import { motion, useInView } from "framer-motion";
 
 const projectsData = [
   {
     id: "elyon",
-    number: "01",
     title: "Elyon Luxury E-Commerce",
-    subtitle: "Real-Time Inventory Synchronization & High-Conversion Checkout Flow",
-    role: "Technical Product Manager & Full-Stack Builder",
-    timeline: "2025",
-    tags: ["Product Architecture", "MERN Stack", "Socket.io", "Firebase Auth", "Real-Time Telemetry"],
-    summary:
-      "Architected and built a minimalist luxury skincare e-commerce platform solving cart-collision friction and stale inventory states through event-driven WebSockets, optimistic updates, and atomic transactional decrementing.",
-    problem:
-      "Boutique skincare buyers demand seamless, high-trust purchasing journeys. In flash-drop scenarios, traditional HTTP polling caused race conditions, sold-out checkout errors at the final step, and high cart abandonment rates (>60%).",
-    architecture: [
-      { component: "Frontend State", detail: "React with centralized state orchestration for zero-flicker cart updates and instant price re-calculations." },
-      { component: "Real-Time Broadcast", detail: "Node.js & Socket.io push channel pushing stock decrement events to all active sessions in under 60ms." },
-      { component: "Transactional DB", detail: "MongoDB atomic decrement operators prevent negative inventory counters during concurrent checkout surges." },
-      { component: "Identity & RBAC", detail: "Role-based access control (RBAC) via Firebase Auth tokens protecting administrative telemetry consoles." }
-    ],
-    tradeoffs: [
-      {
-        decision: "WebSockets vs. Short Polling",
-        choice: "Selected Socket.io push channels over 5-second polling intervals.",
-        rationale: "Eliminated 92% of redundant server HTTP request overhead while slashing inventory latency from 5,000ms down to sub-100ms, essential for avoiding cart collisions."
-      },
-      {
-        decision: "Optimistic UI vs. Strict Server Lock",
-        choice: "Applied optimistic local item reservation with temporary 10-minute cart leases.",
-        rationale: "Prevents UI freezing and reduces perceived checkout latency, with automatic lease release if payment is abandoned."
-      }
-    ],
-    outcomes: [
-      "Zero cart-collision errors or out-of-stock payment declines recorded during peak concurrent checkout tests.",
-      "18% increase in checkout funnel completion rate due to upfront inventory certainty.",
-      "Real-time administrative telemetry console tracking live active carts, SKU velocity, and order fulfillment states."
-    ]
+    category: "Full-Stack Build",
+    description: "Built end-to-end: real-time inventory sync via WebSockets, optimistic UI, atomic transactions, and RBAC — solving cart-collision friction for a luxury skincare brand.",
+    tags: ["React", "Node.js", "Socket.io", "MongoDB"],
+    year: "2025",
+    href: "https://github.com/AlexBrighten",
+  },
+  {
+    id: "product-teardowns",
+    title: "6 Product Teardowns",
+    category: "Product Analysis",
+    description: "Deep-dive analyses of Swiggy, WhatsApp Pay, Zomato, Spotify, Razorpay, and Instagram — covering JTBD, funnel friction, business models, and RICE-scored recommendations.",
+    tags: ["JTBD", "Funnel Analysis", "RICE Framework", "Metrics"],
+    year: "2025",
+    href: "mailto:alexjob.pm@gmail.com?subject=Product%20Teardown%20Decks%20Request",
   },
   {
     id: "spidey-tracker",
-    number: "02",
-    title: "Spidey Tracker: Offline-First Habit Analytics",
-    subtitle: "Eliminating Network Latency with Optimistic UI & Local Caching",
-    role: "Product Designer & Frontend Engineer",
-    timeline: "2024",
-    tags: ["Offline-First PWA", "IndexedDB", "Firestore Sync", "Recharts", "Optimistic UI"],
-    summary:
-      "Engineered an installable habit tracking Progressive Web App (PWA) prioritizing sub-50ms local write latency, ensuring users can log progress instantly without waiting on cellular network availability.",
-    problem:
-      "Most productivity and habit trackers experience severe drop-off (>40% 7-day churn) because network latency introduces micro-delays when logging daily actions. In subways, basements, or spotty connectivity, delayed spinners disrupt the habit loop.",
-    architecture: [
-      { component: "Client Engine", detail: "Vite + React with progressive web app (PWA) service worker caching for instant offline app loading." },
-      { component: "Local Persistence", detail: "IndexedDB client-side database providing local write latency under 35ms with zero network dependency." },
-      { component: "Background Sync", detail: "Service Worker queue automatically pushes offline mutations to Firestore when connectivity is re-established." },
-      { component: "Data Visualization", detail: "Custom responsive SVG charts and streak progression metrics generated dynamically using Recharts." }
-    ],
-    tradeoffs: [
-      {
-        decision: "Local-First IndexedDB vs. Cloud-First API",
-        choice: "Architected as a true offline-first client app with eventual cloud consistency.",
-        rationale: "Ensures 100% app availability even with zero network signal. Habit tracking requires zero perceived latency to build muscle memory."
-      },
-      {
-        decision: "Conflict Reconciliation Strategy",
-        choice: "Timestamp-based Last-Write-Wins (LWW) with localized diff merging.",
-        rationale: "Avoided complex CRDT overhead while ensuring seamless synchronization when syncing multiple device sessions."
-      }
-    ],
-    outcomes: [
-      "Sub-50ms interaction latency on habit logs with zero perceptible interface spinners.",
-      "100% offline uptime ensuring uninterrupted tracking routines in dead zones.",
-      "35% higher 30-day user retention compared to conventional cloud-dependent habit trackers."
-    ]
+    title: "Spidey Tracker PWA",
+    category: "Offline-First App",
+    description: "Engineered an offline-first habit tracker with sub-50ms local writes via IndexedDB, service worker background sync, and streak analytics dashboards.",
+    tags: ["PWA", "IndexedDB", "Firestore", "Recharts"],
+    year: "2024",
+    href: "https://github.com/AlexBrighten",
   },
   {
     id: "curious-bees",
-    number: "03",
-    title: "SRM Curious Bees Platform & Design System",
-    subtitle: "Unifying Campus Workflows & Accelerating Engineering Hand-Offs",
-    role: "UX Designer & Product Intern",
-    timeline: "2024",
-    tags: ["Design System", "User Research", "Agile Backlogs", "Usability Testing", "Figma Tokens"],
-    summary:
-      "Spearheaded user research and a unified modular design system for an in-house campus SaaS platform, translating student needs into structured engineering backlogs and accelerating sprint velocity.",
-    problem:
-      "Fragmented UI components and ad-hoc engineering handoffs created a 40% user onboarding delay, recurring regression bugs, and inconsistent student volunteer experiences across university initiatives.",
-    architecture: [
-      { component: "Design Tokens", detail: "Created 40+ accessible UI primitives in Figma mapped 1:1 to CSS tokens and React component props." },
-      { component: "Discovery Research", detail: "Conducted moderated usability sessions across 60+ university students to isolate drop-off friction points." },
-      { component: "Sprint Specifications", detail: "Drafted technical PRDs and user stories with structured Given/When/Then acceptance criteria for engineering." },
-      { component: "Funnel Benchmarking", detail: "Standardized funnel telemetry across student registration, check-ins, and event certificates." }
-    ],
-    tradeoffs: [
-      {
-        decision: "Strict Component Constraints vs. Bespoke UI Freedom",
-        choice: "Enforced strict design token reuse across all volunteer platforms.",
-        rationale: "Eliminated recurring CSS bloat, reduced engineering implementation time by 30%, and ensured accessible contrast standards across all viewports."
-      },
-      {
-        decision: "Prioritizing Core Check-In Flow over Secondary Features",
-        choice: "Deferred secondary profile customization in favor of a lightning-fast 2-tap QR check-in flow.",
-        rationale: "Solved the primary pain point of massive symposium registration bottlenecks during morning peak hours."
-      }
-    ],
-    outcomes: [
-      "Cut student onboarding drop-off and physical check-in queue wait times by 40%.",
-      "Achieved 100% design-to-code parity across 3 subsequent product release cycles.",
-      "Established the foundational agile backlog prioritization framework adopted by 25+ student volunteer leads."
-    ]
-  }
+    title: "SRM Curious Bees Platform",
+    category: "UX & Operations",
+    description: "Led user research across 60+ students, built a 40-component design system, drafted PRDs with acceptance criteria, and cut onboarding drop-off by 40%.",
+    tags: ["User Research", "Design System", "Agile", "PRDs"],
+    year: "2024",
+    href: "https://github.com/AlexBrighten",
+  },
 ];
 
 export default function Projects() {
-  const [activeProjectId, setActiveProjectId] = useState("elyon");
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-80px" });
 
-  const activeProject = projectsData.find(p => p.id === activeProjectId) || projectsData[0];
-
   return (
-    <section className={`section-light ${styles.projectsSection}`} id="projects" ref={ref}>
-      <div className="container">
-        {/* Section Header */}
+    <section
+      className="relative bg-[#0a0a0a] px-0 py-24 md:py-32"
+      id="projects"
+      ref={ref}
+    >
+      <div className="mx-auto max-w-[1200px] px-8 max-md:px-5 max-[480px]:px-4">
+        {/* Section header */}
         <motion.div
-          className={styles.header}
+          className="mb-16 flex flex-col gap-4 md:flex-row md:items-end md:justify-between"
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
         >
-          <span className="section-badge section-badge-light">End-to-End Delivery</span>
-          <h2 className="section-title">Projects &amp; Case Studies</h2>
-          <p className="section-subtitle section-subtitle-light">
-            Real software products built and managed end-to-end — detailing user problems, architectural decisions, technical trade-offs, and measurable business outcomes.
-          </p>
+          <div>
+            <span className="mb-4 inline-flex items-center gap-2 font-mono text-xs uppercase tracking-[0.1em] text-[#666]">
+              Proof of Work
+            </span>
+            <h2 className="text-4xl font-bold leading-tight tracking-[-0.03em] text-white sm:text-5xl">
+              Projects & Analyses
+            </h2>
+          </div>
+          <a
+            href="#contact"
+            className="inline-flex items-center gap-2 text-sm font-medium text-[#888] transition-colors hover:text-[#c8ff00]"
+          >
+            Want the full case studies?
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M5 12h14" />
+              <path d="M12 5l7 7-7 7" />
+            </svg>
+          </a>
         </motion.div>
 
-        {/* Project Selector Tabs */}
-        <div className={styles.tabContainer}>
-          {projectsData.map((project) => {
-            const isActive = activeProjectId === project.id;
-
-            return (
-              <button
-                key={project.id}
-                className={`${styles.tabBtn} ${isActive ? styles.tabBtnActive : ""}`}
-                onClick={() => setActiveProjectId(project.id)}
-              >
-                <span className={styles.tabNumber}>{project.number}</span>
-                <div className={styles.tabInfo}>
-                  <span className={styles.tabTitle}>{project.title}</span>
-                  <span className={styles.tabRole}>{project.role}</span>
+        {/* Projects list */}
+        <div className="flex flex-col">
+          {projectsData.map((project, i) => (
+            <motion.a
+              key={project.id}
+              href={project.href}
+              target={project.href.startsWith("http") ? "_blank" : undefined}
+              rel={project.href.startsWith("http") ? "noopener noreferrer" : undefined}
+              className="group block cursor-pointer border-t border-white/[0.06] py-8 transition-colors first:border-t-0 hover:bg-white/[0.01] md:py-10"
+              initial={{ opacity: 0, y: 25 }}
+              animate={isInView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.5, delay: 0.1 + i * 0.1 }}
+            >
+              <div className="flex flex-col gap-5 md:flex-row md:items-center md:justify-between">
+                <div className="flex-1">
+                  <div className="mb-3 flex items-center gap-3">
+                    <span className="rounded-full border border-white/[0.08] bg-white/[0.03] px-3 py-1 text-xs font-medium text-[#888]">
+                      {project.category}
+                    </span>
+                    <span className="text-xs text-[#444]">{project.year}</span>
+                  </div>
+                  <h3 className="mb-2 text-2xl font-bold tracking-[-0.02em] text-white transition-colors group-hover:text-[#c8ff00] md:text-3xl">
+                    {project.title}
+                  </h3>
+                  <p className="max-w-[550px] text-sm leading-[1.6] text-[#777]">
+                    {project.description}
+                  </p>
                 </div>
-              </button>
-            );
-          })}
+
+                <div className="flex items-center gap-4">
+                  <div className="hidden flex-wrap gap-2 lg:flex">
+                    {project.tags.map((tag) => (
+                      <span
+                        key={tag}
+                        className="rounded-full border border-white/[0.06] bg-[#111113] px-3 py-1.5 text-xs text-[#666]"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                  <div className="flex h-10 w-10 items-center justify-center rounded-full border border-white/[0.08] bg-white/[0.03] text-[#555] transition-all group-hover:border-[#c8ff00]/30 group-hover:bg-[#c8ff00]/10 group-hover:text-[#c8ff00]">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M7 17L17 7" />
+                      <path d="M7 7h10v10" />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </motion.a>
+          ))}
+          {/* Bottom border */}
+          <div className="border-t border-white/[0.06]" />
         </div>
-
-        {/* Active Project Case Study Deep Dive */}
-        <AnimatePresence mode="wait">
-          <motion.div
-            key={activeProject.id}
-            className={styles.caseStudyCard}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            transition={{ duration: 0.4 }}
-          >
-            {/* Top Bar */}
-            <div className={styles.caseTop}>
-              <div className={styles.caseMeta}>
-                <span className={styles.timelineBadge}>{activeProject.timeline}</span>
-                <span className={styles.roleTag}>{activeProject.role}</span>
-              </div>
-              <div className={styles.tagList}>
-                {activeProject.tags.map((tag) => (
-                  <span key={tag} className={styles.tagChip}>{tag}</span>
-                ))}
-              </div>
-            </div>
-
-            {/* Title & Subtitle */}
-            <div className={styles.caseHeader}>
-              <h3 className={styles.caseTitle}>{activeProject.title}</h3>
-              <p className={styles.caseSubtitle}>{activeProject.subtitle}</p>
-            </div>
-
-            {/* Summary & Problem Grid */}
-            <div className={styles.overviewGrid}>
-              <div className={styles.overviewCard}>
-                <span className={styles.overviewLabel}>Product Summary</span>
-                <p>{activeProject.summary}</p>
-              </div>
-              <div className={`${styles.overviewCard} ${styles.problemCard}`}>
-                <span className={styles.overviewLabel}>The Core Problem &amp; Friction</span>
-                <p>{activeProject.problem}</p>
-              </div>
-            </div>
-
-            {/* System Architecture */}
-            <div className={styles.architectureSection}>
-              <h4 className={styles.subHeading}>System Architecture &amp; Implementation</h4>
-              <div className={styles.archGrid}>
-                {activeProject.architecture.map((item, idx) => (
-                  <div key={idx} className={styles.archCard}>
-                    <span className={styles.archLabel}>{item.component}</span>
-                    <p>{item.detail}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            {/* Trade-offs & Decisions */}
-            <div className={styles.tradeoffSection}>
-              <h4 className={styles.subHeading}>Product Decisions &amp; Engineering Trade-offs</h4>
-              <div className={styles.tradeoffGrid}>
-                {activeProject.tradeoffs.map((item, idx) => (
-                  <div key={idx} className={styles.tradeoffCard}>
-                    <span className={styles.tradeoffTitle}>{item.decision}</span>
-                    <div className={styles.choiceBox}>
-                      <strong>Choice:</strong> {item.choice}
-                    </div>
-                    <p className={styles.rationaleText}>
-                      <strong>Rationale:</strong> {item.rationale}
-                    </p>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            {/* Measurable Outcomes */}
-            <div className={styles.outcomesSection}>
-              <h4 className={styles.subHeading}>Measurable Outcomes &amp; Impact</h4>
-              <ul className={styles.outcomesList}>
-                {activeProject.outcomes.map((outcome, idx) => (
-                  <li key={idx} className={styles.outcomeItem}>
-                    <span className={styles.outcomeCheck}>✓</span>
-                    <p>{outcome}</p>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </motion.div>
-        </AnimatePresence>
       </div>
     </section>
   );

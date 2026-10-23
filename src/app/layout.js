@@ -8,13 +8,13 @@ const inter = Inter({
 });
 
 export const metadata = {
-  title: "Alex Job A — Aspiring Product Manager",
+  title: "Alex Job A — Aspiring Founder's Office Associate",
   description:
-    "Portfolio of Alex Job A, an aspiring Product Manager passionate about building user-centric products that solve real problems. Explore product teardowns, skills, and experiences.",
-  keywords: ["Product Manager", "PM", "Portfolio", "Alex Job A", "UX", "Product Strategy", "Product Teardowns"],
+    "Portfolio of Alex Job A — an aspiring Founder's Office Associate with a technical foundation in product thinking, data-driven execution, and cross-functional problem solving.",
+  keywords: ["Founder's Office", "Startup", "Product Strategy", "Alex Job A", "Operations", "Growth", "Business Strategy"],
   openGraph: {
-    title: "Alex Job A — Aspiring Product Manager",
-    description: "Building user-centric products that solve real problems.",
+    title: "Alex Job A — Aspiring Founder's Office Associate",
+    description: "Technical thinker. Cross-functional executor. Builder at heart.",
     type: "website",
   },
 };

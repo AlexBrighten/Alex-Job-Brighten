@@ -1,21 +1,21 @@
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import About from "./components/About";
-import ProductTeardowns from "./components/ProductTeardowns";
+import Services from "./components/Services";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
 
 export default function Home() {
   return (
-    <>
+    <div className="relative isolate min-h-screen overflow-hidden bg-[#0a0a0a]">
       <Navbar />
-      <main>
+      <main className="flex flex-col">
         <Hero />
         <About />
-        <ProductTeardowns />
+        <Services />
         <Projects />
         <Contact />
       </main>
-    </>
+    </div>
   );
 }
