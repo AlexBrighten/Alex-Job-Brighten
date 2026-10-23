@@ -28,15 +28,15 @@ const socialLinks = [
 export default function Hero() {
   return (
     <section
-      className="relative flex min-h-screen items-center overflow-hidden bg-[#0a0a0a] px-0 pb-0 pt-28"
+      className="relative flex min-h-screen items-center overflow-hidden bg-[#0b0c10] px-0 pb-0 pt-28"
       id="hero"
     >
       {/* Background grid */}
       <div className="absolute inset-0 opacity-80 [background-image:linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] [background-size:60px_60px]" />
       
       {/* Gradient orbs */}
-      <div className="absolute -right-32 -top-48 h-[500px] w-[500px] rounded-full bg-white/[0.03] blur-[120px]" />
-      <div className="absolute -bottom-32 -left-32 h-[400px] w-[400px] rounded-full bg-white/[0.02] blur-[100px]" />
+      <div className="absolute -right-32 -top-48 h-[500px] w-[500px] rounded-full bg-[#ef4444]/10 blur-[120px]" />
+      <div className="absolute -bottom-32 -left-32 h-[400px] w-[400px] rounded-full bg-[#1d4ed8]/15 blur-[100px]" />
 
       <div className="relative z-10 mx-auto flex w-full max-w-[1200px] flex-col gap-16 px-8 max-md:px-5 max-[480px]:px-4 lg:flex-row lg:items-start lg:justify-between">
         {/* Left content */}
@@ -48,12 +48,12 @@ export default function Hero() {
         >
           {/* Available badge */}
           <motion.div
-            className="mb-8 inline-flex items-center gap-2.5 text-sm font-medium text-[#c8ff00]"
+            className="mb-8 inline-flex items-center gap-2.5 text-sm font-medium text-[#ef4444]"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
-            <span className="h-2 w-2 rounded-full bg-[#c8ff00] shadow-[0_0_8px_rgba(200,255,0,0.5)]" />
+            <span className="h-2 w-2 rounded-full bg-[#ef4444] shadow-[0_0_8px_rgba(239,68,68,0.65)]" />
             Open to Founder&apos;s Office roles
           </motion.div>
 
@@ -86,11 +86,11 @@ export default function Hero() {
           >
             <a
               href="#services"
-              className="group inline-flex items-center gap-3 rounded-sm text-sm font-medium text-white transition-colors hover:text-[#c8ff00]"
+              className="group inline-flex items-center gap-3 rounded-sm text-sm font-medium text-white transition-colors hover:text-[#ef4444]"
             >
               <span className="border-b border-dashed border-white/20 pb-0.5">What I bring</span>
-              <span className="flex h-8 w-8 items-center justify-center rounded-full bg-[#c8ff00] transition-transform group-hover:scale-110">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#0a0a0a" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+              <span className="flex h-8 w-8 items-center justify-center rounded-full bg-[#ef4444] transition-transform group-hover:scale-110">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#0b0c10" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M7 17L17 7" />
                   <path d="M7 7h10v10" />
                 </svg>
@@ -116,18 +116,18 @@ export default function Hero() {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.7, delay: 0.5 }}
         >
-          <div className="flex flex-col overflow-hidden rounded-2xl border border-white/[0.06] bg-[#111113]">
+          <div className="flex flex-col overflow-hidden rounded-2xl border border-white/[0.08] bg-[#13151b] shadow-[0_18px_60px_rgba(29,78,216,0.12)]">
             {socialLinks.map((social, index) => (
               <a
                 key={social.name}
                 href={social.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className={`group flex items-center gap-4 px-6 py-4 transition-colors hover:bg-white/[0.03] ${
-                  index !== socialLinks.length - 1 ? "border-b border-white/[0.06]" : ""
+                  className={`group flex items-center gap-4 px-6 py-4 transition-colors hover:bg-[#222634] ${
+                  index !== socialLinks.length - 1 ? "border-b border-white/[0.08]" : ""
                 }`}
               >
-                <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-white/[0.04] text-[#888] transition-colors group-hover:bg-white/[0.08] group-hover:text-white">
+                <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-[#191c26] text-[#94a3b8] transition-colors group-hover:bg-[#1e3a8a] group-hover:text-[#38bdf8]">
                   {social.icon}
                 </span>
                 <div className="flex flex-col">

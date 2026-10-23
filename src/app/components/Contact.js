@@ -44,7 +44,7 @@ export default function Contact() {
       {/* Stripe divider */}
       <div className="stripe-divider" />
 
-      <section className="bg-[#0a0a0a] px-0 pb-20 pt-24 md:pt-32" id="contact" ref={ref}>
+      <section className="bg-[#0b0c10] px-0 pb-20 pt-24 md:pt-32" id="contact" ref={ref}>
         <div className="mx-auto max-w-[1200px] px-8 max-md:px-5 max-[480px]:px-4">
           <motion.div
             className="flex flex-col items-center text-center"
@@ -52,13 +52,13 @@ export default function Contact() {
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6 }}
           >
-            <span className="mb-6 inline-flex items-center gap-2 font-mono text-xs uppercase tracking-[0.1em] text-[#c8ff00]">
+            <span className="mb-6 inline-flex items-center gap-2 font-mono text-xs uppercase tracking-[0.1em] text-[#ef4444]">
               Get in Touch
             </span>
 
             <h2 className="mb-6 max-w-[640px] text-4xl font-bold leading-tight tracking-[-0.03em] text-white md:text-5xl">
               Let&apos;s build something{" "}
-              <span className="bg-gradient-to-r from-[#c8ff00] to-[#88cc00] bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-[#ef4444] to-[#2563eb] bg-clip-text text-transparent">
                 meaningful
               </span>{" "}
               together.
@@ -75,6 +75,7 @@ export default function Contact() {
               whileTap={{ scale: 0.98 }}
             >
               <VenomButton
+                className="text-[#f8fafc]"
                 aria-label="Send Alex an email"
                 onClick={() => {
                   window.location.href = "mailto:alexjob.pm@gmail.com";
@@ -90,7 +91,7 @@ export default function Contact() {
                 <motion.a
                   key={s.name}
                   href={s.href}
-                  className="inline-flex items-center justify-center gap-2.5 rounded-xl border border-white/[0.06] bg-[#111113] px-5 py-3 text-sm font-medium text-[#999] transition-all hover:border-white/[0.12] hover:bg-[#1a1a1c] hover:text-white"
+                  className="inline-flex items-center justify-center gap-2.5 rounded-xl border border-white/[0.08] bg-[#13151b] px-5 py-3 text-sm font-medium text-white/60 transition-all hover:border-[#3b82f6]/40 hover:bg-[#191c26] hover:text-white"
                   aria-label={s.name}
                   target="_blank"
                   rel="noopener noreferrer"
@@ -112,8 +113,8 @@ export default function Contact() {
       <footer className="border-t border-white/[0.04] bg-[#070709] px-0 py-10">
         <div className="mx-auto max-w-[1200px] px-8 max-md:px-5 max-[480px]:px-4">
           <div className="flex flex-col items-center gap-3 text-center">
-            <span className="text-lg font-extrabold tracking-[-0.03em] text-[#f5f5f5]">
-              Alex<span className="text-[#c8ff00]">.</span>
+            <span className="text-lg font-extrabold tracking-[-0.03em] text-[#f8fafc]">
+              Alex<span className="text-[#ef4444]">.</span>
             </span>
             <p className="text-xs text-[#555]">
               Designed & built by Alex Job A · {new Date().getFullYear()}

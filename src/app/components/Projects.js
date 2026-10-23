@@ -48,7 +48,7 @@ export default function Projects() {
 
   return (
     <section
-      className="relative bg-[#0a0a0a] px-0 py-24 md:py-32"
+      className="relative bg-[#0d0f14] px-0 py-24 md:py-32"
       id="projects"
       ref={ref}
     >
@@ -61,7 +61,7 @@ export default function Projects() {
           transition={{ duration: 0.6 }}
         >
           <div>
-            <span className="mb-4 inline-flex items-center gap-2 font-mono text-xs uppercase tracking-[0.1em] text-[#666]">
+            <span className="mb-4 inline-flex items-center gap-2 font-mono text-xs uppercase tracking-[0.1em] text-[#38bdf8]">
               Proof of Work
             </span>
             <h2 className="text-4xl font-bold leading-tight tracking-[-0.03em] text-white sm:text-5xl">
@@ -72,7 +72,7 @@ export default function Projects() {
             href="https://github.com/AlexBrighten"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 text-sm font-medium text-[#888] transition-colors hover:text-[#c8ff00]"
+            className="inline-flex items-center gap-2 text-sm font-medium text-white/60 transition-colors hover:text-[#ef4444]"
           >
             View all on GitHub
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -90,7 +90,7 @@ export default function Projects() {
               href={project.href}
               target={project.href.startsWith("http") ? "_blank" : undefined}
               rel={project.href.startsWith("http") ? "noopener noreferrer" : undefined}
-              className="group block cursor-pointer border-t border-white/[0.06] py-8 transition-colors first:border-t-0 hover:bg-white/[0.01] md:py-10"
+              className="group block cursor-pointer border-t border-white/[0.08] py-8 transition-colors first:border-t-0 hover:bg-[#13151b]/70 md:py-10"
               initial={{ opacity: 0, y: 25 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: 0.1 + i * 0.1 }}
@@ -98,12 +98,12 @@ export default function Projects() {
               <div className="flex flex-col gap-5 md:flex-row md:items-center md:justify-between">
                 <div className="flex-1">
                   <div className="mb-3 flex items-center gap-3">
-                    <span className="rounded-full border border-white/[0.08] bg-white/[0.03] px-3 py-1 text-xs font-medium text-[#888]">
+                    <span className="rounded-full border border-[#3b82f6]/25 bg-[#1e3a8a]/20 px-3 py-1 text-xs font-medium text-[#93c5fd]">
                       {project.category}
                     </span>
                     <span className="text-xs text-[#444]">{project.year}</span>
                   </div>
-                  <h3 className="mb-2 text-2xl font-bold tracking-[-0.02em] text-white transition-colors group-hover:text-[#c8ff00] md:text-3xl">
+                  <h3 className="mb-2 text-2xl font-bold tracking-[-0.02em] text-white transition-colors group-hover:text-[#ef4444] md:text-3xl">
                     {project.title}
                   </h3>
                   <p className="max-w-[550px] text-sm leading-[1.6] text-[#777]">
@@ -116,13 +116,13 @@ export default function Projects() {
                     {project.tags.map((tag) => (
                       <span
                         key={tag}
-                        className="rounded-full border border-white/[0.06] bg-[#111113] px-3 py-1.5 text-xs text-[#666]"
+                        className="rounded-full border border-white/[0.08] bg-[#13151b] px-3 py-1.5 text-xs text-white/45"
                       >
                         {tag}
                       </span>
                     ))}
                   </div>
-                  <div className="flex h-10 w-10 items-center justify-center rounded-full border border-white/[0.08] bg-white/[0.03] text-[#555] transition-all group-hover:border-[#c8ff00]/30 group-hover:bg-[#c8ff00]/10 group-hover:text-[#c8ff00]">
+                  <div className="flex h-10 w-10 items-center justify-center rounded-full border border-white/[0.08] bg-[#191c26] text-white/40 transition-all group-hover:border-[#ef4444]/40 group-hover:bg-[#7f1d1d]/30 group-hover:text-[#ef4444]">
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                       <path d="M7 17L17 7" />
                       <path d="M7 7h10v10" />

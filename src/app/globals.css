@@ -2,16 +2,19 @@
 
 @theme {
   --font-inter: "Inter", system-ui, -apple-system, sans-serif;
-  --color-brand: #c8ff00;
-  --color-brand-hover: #d4ff33;
-  --color-surface: #0a0a0a;
-  --color-surface-elevated: #111113;
-  --color-surface-card: #141416;
+  --color-brand: #ef4444;
+  --color-brand-hover: #dc2626;
+  --color-cobalt: #3b82f6;
+  --color-cobalt-bright: #2563eb;
+  --color-cyan: #38bdf8;
+  --color-surface: #0b0c10;
+  --color-surface-elevated: #13151b;
+  --color-surface-card: #191c26;
   --color-border: rgba(255, 255, 255, 0.06);
   --color-border-hover: rgba(255, 255, 255, 0.12);
-  --color-text-primary: #f5f5f5;
-  --color-text-secondary: #a0a0a0;
-  --color-text-tertiary: #666;
+  --color-text-primary: #f8fafc;
+  --color-text-secondary: rgba(255, 255, 255, 0.7);
+  --color-text-tertiary: rgba(255, 255, 255, 0.4);
 }
 
 html {
@@ -43,7 +46,7 @@ body {
 
 /* Selection */
 ::selection {
-  background: rgba(200, 255, 0, 0.25);
+  background: rgba(239, 68, 68, 0.35);
   color: #fff;
 }
 
@@ -73,7 +76,7 @@ a {
 
 /* Focus visible */
 *:focus-visible {
-  outline: 2px solid var(--color-brand);
+  outline: 2px solid var(--color-cobalt);
   outline-offset: 2px;
   border-radius: 4px;
 }

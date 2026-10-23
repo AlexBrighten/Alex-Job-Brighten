@@ -31,7 +31,7 @@ export default function Navbar() {
       <motion.nav
         className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${
           scrolled
-            ? "bg-[#0a0a0a]/80 backdrop-blur-xl border-b border-white/[0.04]"
+            ? "bg-[#0b0c10]/85 backdrop-blur-xl border-b border-white/[0.06]"
             : "bg-transparent"
         }`}
         initial={{ y: -100 }}
@@ -45,11 +45,11 @@ export default function Navbar() {
             className="flex items-center gap-0.5 text-[1.35rem] font-extrabold tracking-[-0.04em] text-[#f5f5f5] transition-opacity hover:opacity-80"
           >
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" className="mr-1.5">
-              <circle cx="12" cy="12" r="10" stroke="#c8ff00" strokeWidth="2" />
-              <path d="M8 12l3 3 5-5" stroke="#c8ff00" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+              <circle cx="12" cy="12" r="10" stroke="#ef4444" strokeWidth="2" />
+              <path d="M8 12l3 3 5-5" stroke="#38bdf8" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
             </svg>
             Alex
-            <span className="text-3xl leading-none text-[#c8ff00]">.</span>
+            <span className="text-3xl leading-none text-[#ef4444]">.</span>
           </a>
 
           {/* Desktop Nav Links */}
@@ -68,11 +68,11 @@ export default function Navbar() {
           {/* CTA Button */}
           <a
             href="#contact"
-            className="hidden items-center gap-2 rounded-full border border-white/10 bg-white/[0.04] px-5 py-2.5 text-xs font-semibold text-[#f5f5f5] transition-all hover:border-white/20 hover:bg-white/[0.08] md:inline-flex"
+            className="hidden items-center gap-2 rounded-full border border-[#ef4444]/40 bg-[#ef4444]/10 px-5 py-2.5 text-xs font-semibold text-[#f8fafc] transition-all hover:border-[#ef4444] hover:bg-[#dc2626]/20 md:inline-flex"
           >
             Let&apos;s Talk
-            <span className="flex h-6 w-6 items-center justify-center rounded-full bg-[#c8ff00]">
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#0a0a0a" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
+            <span className="flex h-6 w-6 items-center justify-center rounded-full bg-[#ef4444]">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#0b0c10" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M7 17L17 7" />
                 <path d="M7 7h10v10" />
               </svg>
@@ -108,7 +108,7 @@ export default function Navbar() {
       <AnimatePresence>
         {menuOpen && (
           <motion.div
-            className="fixed inset-0 z-40 flex flex-col items-center justify-center gap-8 bg-[#0a0a0a]/98 backdrop-blur-3xl md:hidden"
+            className="fixed inset-0 z-40 flex flex-col items-center justify-center gap-8 bg-[#0b0c10]/98 backdrop-blur-3xl md:hidden"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
@@ -118,7 +118,7 @@ export default function Navbar() {
               <motion.a
                 key={link.href}
                 href={link.href}
-                className="text-3xl font-semibold text-white transition-colors hover:text-[#c8ff00]"
+                className="text-3xl font-semibold text-white transition-colors hover:text-[#ef4444]"
                 onClick={() => setMenuOpen(false)}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -130,7 +130,7 @@ export default function Navbar() {
             ))}
             <motion.a
               href="#contact"
-              className="mt-4 rounded-full bg-[#c8ff00] px-8 py-3.5 text-sm font-bold text-[#0a0a0a]"
+              className="mt-4 rounded-full bg-[#ef4444] px-8 py-3.5 text-sm font-bold text-[#0b0c10]"
               onClick={() => setMenuOpen(false)}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}

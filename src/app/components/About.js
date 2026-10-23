@@ -22,7 +22,7 @@ export default function About() {
 
   return (
     <section
-      className="relative overflow-hidden bg-[#0a0a0a] px-0 py-24 md:py-32"
+      className="relative overflow-hidden bg-[#0b0c10] px-0 py-24 md:py-32"
       id="about"
       ref={ref}
     >
@@ -36,7 +36,7 @@ export default function About() {
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.5, delay: 0.1 }}
           >
-            <span className="inline-flex items-center gap-2 rounded-full border border-white/[0.08] bg-[#141416] px-4 py-2 text-xs font-medium text-[#ccc] shadow-lg shadow-black/20">
+            <span className="inline-flex items-center gap-2 rounded-full border border-[#3b82f6]/25 bg-[#13151b] px-4 py-2 text-xs font-medium text-white/75 shadow-lg shadow-[#1e3a8a]/20">
               <span className="text-sm">⚡</span> Cross-Functional
             </span>
           </motion.div>
@@ -47,7 +47,7 @@ export default function About() {
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.5, delay: 0.25 }}
           >
-            <span className="inline-flex items-center gap-2 rounded-full border border-white/[0.08] bg-[#141416] px-4 py-2 text-xs font-medium text-[#ccc] shadow-lg shadow-black/20">
+            <span className="inline-flex items-center gap-2 rounded-full border border-[#ef4444]/25 bg-[#13151b] px-4 py-2 text-xs font-medium text-white/75 shadow-lg shadow-[#7f1d1d]/20">
               <span className="text-sm">◎</span> Data-Driven
             </span>
           </motion.div>
@@ -79,7 +79,7 @@ export default function About() {
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.5, delay: 0.4 }}
           >
-            <span className="inline-flex items-center gap-2 rounded-full border border-white/[0.08] bg-[#141416] px-4 py-2 text-xs font-medium text-[#ccc] shadow-lg shadow-black/20">
+            <span className="inline-flex items-center gap-2 rounded-full border border-[#22c55e]/25 bg-[#13151b] px-4 py-2 text-xs font-medium text-white/75 shadow-lg shadow-emerald-950/20">
               <span className="text-sm">🚀</span> Ship Fast
             </span>
           </motion.div>
@@ -90,7 +90,7 @@ export default function About() {
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.5, delay: 0.5 }}
           >
-            <span className="inline-flex items-center gap-2 rounded-full border border-white/[0.08] bg-[#141416] px-4 py-2 text-xs font-medium text-[#ccc] shadow-lg shadow-black/20">
+            <span className="inline-flex items-center gap-2 rounded-full border border-[#f59e0b]/25 bg-[#13151b] px-4 py-2 text-xs font-medium text-white/75 shadow-lg shadow-amber-950/20">
               <span className="text-sm">🔧</span> Builder Mindset
             </span>
           </motion.div>
@@ -115,7 +115,7 @@ export default function About() {
             {skills.map((skill, i) => (
               <motion.span
                 key={skill}
-                className="rounded-full border border-white/[0.06] bg-[#111113] px-5 py-2.5 text-sm font-medium text-[#a0a0a0] transition-all hover:border-white/[0.12] hover:bg-[#1a1a1c] hover:text-white"
+                className="rounded-full border border-white/[0.08] bg-[#13151b] px-5 py-2.5 text-sm font-medium text-white/65 transition-all hover:border-[#3b82f6]/40 hover:bg-[#191c26] hover:text-white"
                 initial={{ opacity: 0, y: 15 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.4, delay: 0.55 + i * 0.04 }}
@@ -141,7 +141,7 @@ export default function About() {
           ].map((stat) => (
             <div
               key={stat.label}
-              className="flex flex-col items-center gap-2 bg-[#0e0e10] px-6 py-8 text-center"
+              className="flex flex-col items-center gap-2 bg-[#0d0f14] px-6 py-8 text-center"
             >
               <span className="text-3xl font-bold text-white">{stat.number}</span>
               <span className="text-xs uppercase tracking-wider text-[#666]">{stat.label}</span>

@@ -7,7 +7,7 @@ import Contact from "./components/Contact";
 
 export default function Home() {
   return (
-    <div className="relative isolate min-h-screen overflow-hidden bg-[#0a0a0a]">
+    <div className="relative isolate min-h-screen overflow-hidden bg-[#0b0c10]">
       <Navbar />
       <main className="flex flex-col">
         <Hero />
