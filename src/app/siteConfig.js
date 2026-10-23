@@ -12,7 +12,7 @@ export const siteConfig = {
       ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
       : process.env.VERCEL_URL
       ? `https://${process.env.VERCEL_URL}`
-      : "https://alex-job-brighten.vercel.app"),
+      : "https://alexjobbrighten.vercel.app"),
   ogImage: "/avatar.jpg",
   author: {
     name: "Alex Job A",
