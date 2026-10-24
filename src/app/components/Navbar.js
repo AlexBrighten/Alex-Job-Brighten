@@ -30,11 +30,10 @@ export default function Navbar() {
   return (
     <>
       <motion.nav
-        className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${
-          scrolled
-            ? "bg-[#0b0c10]/85 backdrop-blur-xl border-b border-white/[0.06]"
-            : "bg-transparent"
-        }`}
+        className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${scrolled
+          ? "bg-[#0b0c10]/85 backdrop-blur-xl border-b border-white/[0.06]"
+          : "bg-transparent"
+          }`}
         initial={{ y: -100 }}
         animate={{ y: 0 }}
         transition={{ duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}
@@ -46,11 +45,7 @@ export default function Navbar() {
             aria-label="Alex Job A - Home"
             className="flex items-center gap-0.5 text-[1.35rem] font-extrabold tracking-[-0.04em] text-[#f5f5f5] transition-opacity hover:opacity-80"
           >
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" className="mr-1.5">
-              <circle cx="12" cy="12" r="10" stroke="#ef4444" strokeWidth="2" />
-              <path d="M8 12l3 3 5-5" stroke="#38bdf8" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-            </svg>
-            Alex
+            Alex Job Brighten
             <span className="text-3xl leading-none text-[#ef4444]">.</span>
           </a>
 
